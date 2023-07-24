@@ -8,7 +8,7 @@
         </template>
         <div :class="[variantClasses.bar, variantClasses.size, variantClasses.barColor]">
             <div :class="[variantClasses.progressBar, variantClasses.size, variantClasses.progressBarColor, variantClasses.insideLabelText]" :style="{ width: props.progress + '%' }">
-                <template v-if="props.showProgress && !props.label">
+                <template v-if="props.progress > 0 && props.showProgress && !props.label">
                     {{ props.progress }}%
                 </template>
             </div>
