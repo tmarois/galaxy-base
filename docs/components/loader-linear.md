@@ -2,7 +2,7 @@
 import LoaderLinearExample from './loader/examples/LoaderLinearExample.vue'
 </script>
 
-# Loader Spinner
+# Loader Linear
 
 ## Import
 ```vue
