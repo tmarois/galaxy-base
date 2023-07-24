@@ -1,6 +1,6 @@
 <template>
-	<div class="w-full">
-		<LoaderLinear :disabled="disabled" />
+	<div class="w-full vp-raw p-8 bg-white border-2 border-gray-300 rounded">
+		<LoaderLinear :disabled="props.disabled" />
 	</div>
 </template>
 <script setup>

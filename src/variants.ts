@@ -49,5 +49,36 @@ export const variants = {
             disabledEmptyColor: 'bg-gray-200 dark:bg-gray-700',
             disabledFillColor: 'bg-gray-400 dark:bg-gray-500',
         }
+    },
+    'LoaderProgress' : {
+        default: {
+            wrapper: 'relative block w-full overflow-hidden',
+            size: 'h-4',
+            bar: 'w-full rounded-full',
+            barColor: 'bg-gray-200 dark:bg-gray-700',
+            progressBar: 'rounded-full font-medium text-center p-0.5',
+            progressBarColor: 'bg-blue-600 dark:bg-blue-600 text-blue-100',
+            insideLabelText: 'text-xs leading-none',
+            outsideLabelWrapper: 'flex justify-between mb-1',
+            outsideLabelText: 'text-base font-medium',
+            outsideLabelProgress: 'text-sm font-medium',
+        }
+    },
+    'Card' : {
+        default: {
+            wrapper: 'flex flex-col w-full relative',
+            detachedHeaderWrapper: 'flex items-center p-2',
+            headerWrapper: 'flex items-center',
+            headerTheme: 'border-b border-gray-200',
+            headerTitleWrapper: 'grow',
+            headerTitle: 'font-medium text-lg',
+            headerSubtitle: 'font-normal text-sm text-gray-600',
+            headerActions: 'flex items-center',
+            contentWrapper: 'flex flex-col w-full',
+            contentTheme: 'rounded shadow border border-gray-200 bg-white',
+            body: 'grow',
+            footerTheme: 'border-t border-gray-300',
+            padding: 'p-4'
+        }
     }
 }

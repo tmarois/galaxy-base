@@ -25,8 +25,10 @@ function getComponents() {
     { text: 'Avatar', link: 'components/avatar' },
     { text: 'Avatar Group', link: 'components/avatar-group' },
     { text: 'Badge', link: 'components/badge' },
+    { text: 'Card', link: 'components/card' },
     { text: 'Loader Spinner', link: 'components/loader-spinner' },
     { text: 'Loader Linear', link: 'components/loader-linear' },
+    { text: 'Loader Progress', link: 'components/loader-progress' },
   ]
 }
 
@@ -50,6 +52,7 @@ function getFormComponents() {
 export default defineConfig({
   title: 'Galaxy UI',
   cleanUrls: 'without-subfolders',
+  appearance: false,
   // head: [
   //   ['link', { rel: "icon", type: "image/svg", href: "/assets/logo.svg"}],
   // ],

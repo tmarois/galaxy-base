@@ -1,10 +1,12 @@
 <template>
-	<div class="flex space-x-2">
-		<Badge text="Car" :removable="remove" />
-		<Badge :removable="remove">House</Badge>
-		<Badge :removable="remove">Cat</Badge>
-		<Badge :removable="remove" variant="blue">Dog</Badge>
-		<Badge :removable="remove" :classes="{themeColor:'bg-red-100 text-red-800'}">Person</Badge>
+	<div class="vp-raw p-8 bg-white border-2 border-gray-200 rounded">
+		<div class="flex space-x-2">
+			<Badge text="Car" :removable="props.remove" />
+			<Badge :removable="props.remove">House</Badge>
+			<Badge :removable="props.remove">Cat</Badge>
+			<Badge :removable="props.remove" variant="blue">Dog</Badge>
+			<Badge :removable="props.remove" :classes="{themeColor:'bg-red-100 text-red-800'}">Person</Badge>
+		</div>
 	</div>
 </template>
 <script setup>
