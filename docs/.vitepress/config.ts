@@ -26,6 +26,8 @@ function getComponents() {
     { text: 'Avatar Group', link: 'components/avatar-group' },
     { text: 'Badge', link: 'components/badge' },
     { text: 'Card', link: 'components/card' },
+    { text: 'Dropdown', link: 'components/dropdown' },
+    { text: 'Tooltip', link: 'components/tooltip' },
     { text: 'Loader Spinner', link: 'components/loader-spinner' },
     { text: 'Loader Linear', link: 'components/loader-linear' },
     { text: 'Loader Progress', link: 'components/loader-progress' },

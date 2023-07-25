@@ -80,5 +80,18 @@ export const variants = {
             footerTheme: 'border-t border-gray-300',
             padding: 'p-4'
         }
+    },
+    'Dropdown' : {
+        default: {
+            wrapper: 'inline',
+            theme: 'bg-white border rounded shadow-md',
+            size: 'w-64'
+        }
+    },
+    'Tooltip' : {
+        default: {
+            wrapper: 'inline',
+            theme: 'bg-white border rounded shadow-md',
+        }
     }
 }
