@@ -1,18 +1,18 @@
 {
-  "name": "galaxy-ui",
+  "name": "galaxy-vue",
   "version": "0.0.1",
-  "repository": "https://github.com/tmarois/galaxy-base-framework.git",
+  "repository": "https://github.com/tmarois/galaxy-vue.git",
   "author": "tmarois",
   "license": "MIT",
   "files": [
     "dist"
   ],
-  "main": "./dist/galaxy-ui.umd.js",
-  "module": "./dist/galaxy-ui.mjs",
+  "main": "./dist/galaxy-vue.umd.js",
+  "module": "./dist/galaxy-vue.mjs",
   "exports": {
     ".": {
-      "import": "./dist/galaxy-ui.mjs",
-      "require": "./dist/galaxy-ui.umd.js"
+      "import": "./dist/galaxy-vue.mjs",
+      "require": "./dist/galaxy-vue.umd.js"
     },
     "./*": "./dist/*"
   },

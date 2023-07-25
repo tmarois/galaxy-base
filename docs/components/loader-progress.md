@@ -7,7 +7,7 @@ import LoaderProgressExample from './loader/examples/LoaderProgressExample.vue'
 ## Import
 ```vue
 <script setup>
-import { LoaderProgress } from 'galaxyui'
+import { LoaderProgress } from 'galaxy-vue'
 </script>
 ```
 

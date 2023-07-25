@@ -7,7 +7,7 @@ import TooltipExample from './tooltip/examples/TooltipExample.vue'
 ## Import
 ```vue
 <script setup>
-import { Tooltip } from 'galaxyui'
+import { Tooltip } from 'galaxy-vue'
 </script>
 ```
 

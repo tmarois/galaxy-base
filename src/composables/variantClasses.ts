@@ -11,7 +11,7 @@ export function useVariantClasses(component: String, variant: String|null|undefi
         }
         return readonly({...v['default'], ...overrides});
     }
-    console.warn(`[Galaxy UI warn] No component "${component}" not found in variant list`)
+    console.warn(`[Galaxy Vue warn] No component "${component}" not found in variant list`)
 }
 
 export function setVariantClasses(variantOverrides: Object) {

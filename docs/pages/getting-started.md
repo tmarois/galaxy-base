@@ -1,1 +1,1 @@
-# Galaxy UI - Quickstart
+# Galaxy Vue - Quickstart

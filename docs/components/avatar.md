@@ -8,7 +8,7 @@ import AvatarStatusExample from './avatar/examples/AvatarStatusExample.vue'
 ## Import
 ```vue
 <script setup>
-import { Avatar } from 'galaxyui'
+import { Avatar } from 'galaxy-vue'
 </script>
 ```
 

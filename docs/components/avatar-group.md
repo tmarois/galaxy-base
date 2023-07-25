@@ -7,7 +7,7 @@ import AvatarGroupExample from './avatar/examples/AvatarGroupExample.vue'
 ## Import
 ```vue
 <script setup>
-import { Avatar, AvatarGroup } from 'galaxyui'
+import { Avatar, AvatarGroup } from 'galaxy-vue'
 </script>
 ```
 

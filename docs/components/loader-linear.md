@@ -7,7 +7,7 @@ import LoaderLinearExample from './loader/examples/LoaderLinearExample.vue'
 ## Import
 ```vue
 <script setup>
-import { LoaderLinear } from 'galaxyui'
+import { LoaderLinear } from 'galaxy-vue'
 </script>
 ```
 

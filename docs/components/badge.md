@@ -7,7 +7,7 @@ import BadgeExample from './badge/examples/BadgeExample.vue'
 ## Import
 ```vue
 <script setup>
-import { Badge } from 'galaxyui'
+import { Badge } from 'galaxy-vue'
 </script>
 ```
 

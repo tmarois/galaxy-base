@@ -9,7 +9,7 @@ import CardDetachHeaderExample from './card/examples/CardDetachHeaderExample.vue
 ## Import
 ```vue
 <script setup>
-import { Card } from 'galaxyui'
+import { Card } from 'galaxy-vue'
 </script>
 ```
 

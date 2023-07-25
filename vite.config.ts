@@ -13,7 +13,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, './src/index.ts'),
-      name: 'galaxy-ui',
+      name: 'galaxy-vue',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

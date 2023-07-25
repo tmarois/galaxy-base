@@ -7,7 +7,7 @@ import LoaderSpinnerExample from './loader/examples/LoaderSpinnerExample.vue'
 ## Import
 ```vue
 <script setup>
-import { LoaderSpinner } from 'galaxyui'
+import { LoaderSpinner } from 'galaxy-vue'
 </script>
 ```
 

@@ -1,11 +1,11 @@
-# Galaxy UI with Nuxt3
+# Galaxy Vue with Nuxt3
 
 ## tailwind.config.js
-Add the galaxy ui to the tailwind content
+Add the galaxy vue to the tailwind content
 ```javascript
 module.exports = {
   content: [
-    './node_modules/galaxyui/**/*.{js,jsx,ts,tsx}',
+    './node_modules/galaxy-vue/**/*.{js,jsx,ts,tsx}',
   ],
 }
 ```
@@ -14,9 +14,9 @@ module.exports = {
 If you want to implement variants on your nuxt3 project
 
 ```javascript
-// ~/plugins/galaxy-ui.js
+// ~/plugins/galaxy-vue.js
 
-import { setVariantClasses } from 'galaxyui'
+import { setVariantClasses } from 'galaxy-vue'
 
 export default defineNuxtPlugin(() => {
     setVariantClasses({

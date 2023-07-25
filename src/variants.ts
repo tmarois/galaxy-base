@@ -72,7 +72,7 @@ export const variants = {
             headerTheme: 'border-b border-gray-200',
             headerTitleWrapper: 'grow',
             headerTitle: 'font-medium text-lg',
-            headerSubtitle: 'font-normal text-sm text-gray-600',
+            headerSubtitle: 'font-normal text-md text-gray-500',
             headerActions: 'flex items-center',
             contentWrapper: 'flex flex-col w-full',
             contentTheme: 'rounded shadow border border-gray-200 bg-white',

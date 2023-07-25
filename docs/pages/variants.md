@@ -1,4 +1,4 @@
-# Galaxy UI - Variants
+# Galaxy Vue - Variants
 
 ```javascript
 import { setVariantClasses } from 'galaxyui';

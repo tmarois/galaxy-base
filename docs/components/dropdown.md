@@ -8,7 +8,7 @@ import DropdownMenuExample from './dropdown/examples/DropdownMenuExample.vue'
 ## Import
 ```vue
 <script setup>
-import { Dropdown } from 'galaxyui'
+import { Dropdown } from 'galaxy-vue'
 </script>
 ```
 

@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: Galaxy UI
+title: Galaxy Vue
 titleTemplate: Galaxy
 
 hero:
-  name: Galaxy UI
+  name: Galaxy Vue
   text: Vue Component Library
   tagline: A universal vue tailwind component library
   image:
@@ -17,4 +17,4 @@ hero:
       link: /pages/getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/tmarois/galaxy-base-framework
+      link: https://github.com/tmarois/galaxy-vue
