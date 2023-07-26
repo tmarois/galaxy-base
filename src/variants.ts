@@ -4,7 +4,7 @@ export const variants = {
             wrapper: 'relative inline-flex',
             content: 'inline-flex items-center justify-center overflow-hidden cursor-default',
             contentSize: 'w-10 h-10 text-md font-medium',
-            contentTheme: 'bg-gray-700 rounded-full text-white',
+            contentTheme: 'bg-primary-700 rounded-full text-white',
             contentHover: 'hover:z-10 cursor-pointer',
             contentGrouped: 'border-2 border-white dark:border-gray-600',
             defaultPlaceholderWrapper: 'relative h-full w-full inline-flex justify-center items-center overflow-hidden',
@@ -26,17 +26,38 @@ export const variants = {
         default: {
             base: 'inline-flex items-center px-2 py-1 gap-x-0.5 cursor-default',
             theme: 'rounded text-sm font-normal',
-            themeColor: 'bg-gray-100 text-gray-800',
+            themeColor: 'bg-primary-100 text-primary-800',
             removeButton: 'flex items-center justify-center relative -mr-1 h-4 w-4',
             removeButtonTheme: 'rounded-full hover:bg-gray-600/20 text-gray-800',
             removeIcon: 'h-3 w-3'
+        }
+    },
+    'Button' : {
+        default: {
+            base: 'whitespace-nowrap font-medium rounded border cursor-pointer',
+            baseSize: 'text-sm px-4 py-2',
+            baseSizeIconOnly: '!p-2',
+            iconSize: 'w-4 h-4',
+            normal: 'text-white bg-primary-700 hover:bg-primary-800 border-transparent',
+            normalDisabled: 'text-white bg-gray-300 hover:bg-gray-300 border-transparent',
+            outlined: 'text-primary-600 border-primary-400 hover:border-primary-800 hover:bg-gray-100 hover:border-primary-700',
+            outlinedDisabled: 'text-gray-400 border-gray-300 hover:!border-gray-300',
+            ghost: 'text-primary-600 hover:bg-gray-200 !border-transparent',
+            ghostDisabled: 'text-gray-400 bg-gray-50 !border-transparent',
+            shadow: 'shadow',
+            disabled: '!cursor-not-allowed',
+        }
+    },
+    'ButtonGroup' : {
+        default: {
+            content: 'btn-group inline-flex -space-x-1 shadow'
         }
     },
     'LoaderSpinner' : {
         default: {
             base: 'animate-spin',
             size: 'w-5 h-5',
-            color: 'text-gray-200 dark:text-gray-600 fill-blue-600 dark:fill-blue-500',
+            color: 'text-gray-200 fill-primary-600',
             disabled: '!fill-gray-400',
         }
     },
@@ -44,10 +65,10 @@ export const variants = {
         default: {
             base: 'relative block w-full overflow-hidden',
             size: 'h-1',
-            emptyColor: 'bg-blue-200 dark:bg-gray-700',
-            fillColor: 'bg-blue-700',
-            disabledEmptyColor: 'bg-gray-200 dark:bg-gray-700',
-            disabledFillColor: 'bg-gray-400 dark:bg-gray-500',
+            emptyColor: 'bg-primary-200',
+            fillColor: 'bg-primary-700',
+            disabledEmptyColor: 'bg-gray-200',
+            disabledFillColor: 'bg-gray-400',
         }
     },
     'LoaderProgress' : {
@@ -55,9 +76,9 @@ export const variants = {
             wrapper: 'relative block w-full overflow-hidden',
             size: 'h-4',
             bar: 'w-full rounded-full',
-            barColor: 'bg-gray-200 dark:bg-gray-700',
+            barColor: 'bg-primary-200',
             progressBar: 'rounded-full p-0.5',
-            progressBarColor: 'bg-blue-600 dark:bg-blue-600 text-blue-100',
+            progressBarColor: 'bg-primary-600 dark:bg-primary-600 text-primary-100',
             insideLabelText: 'font-medium text-center text-xs leading-none',
             outsideLabelWrapper: 'flex justify-between mb-1',
             outsideLabelText: 'text-base font-medium',

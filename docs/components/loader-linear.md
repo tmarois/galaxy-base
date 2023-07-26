@@ -12,24 +12,11 @@ import { LoaderLinear } from 'galaxy-vue'
 ```
 
 ## Default Loader Linear
-
 <LoaderLinearExample />
 
-```vue
-<template>
-    <LoaderLinear />
-</template>
-```
-
 ## Disabled
-
 <LoaderLinearExample disabled />
 
-```vue
-<template>
-    <LoaderLinear disabled />
-</template>
-```
 
 ## Props
 Props that you can pass into the component
