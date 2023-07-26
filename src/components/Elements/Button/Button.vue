@@ -99,7 +99,7 @@ const variantClasses = useVariantClasses('Button', props.variant, props.classes)
 
 const computeClasses = computed(() => {
     return {
-        'btn relative flex items-center justify-center': true,
+        'btn relative inline-flex items-center justify-center': true,
         'w-full h-full': props.responsive || isResponsive,
         [variantClasses.base]: true,
         [variantClasses.baseSize]: true,

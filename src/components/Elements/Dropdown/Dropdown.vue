@@ -12,7 +12,10 @@
         :popper-class="[variantClasses.size, variantClasses.theme]"
     >
         <template v-for="(_, slot) in $slots" #[slot]="scope">
-            <slot :name="slot" v-bind="scope || {}" />
+            <div v-if="slot==='default'" class="inline-block relative" :data-slot="slot" :key="slot">
+                <slot :name="slot" v-bind="scope || {}" />
+            </div>
+            <slot v-else :name="slot" v-bind="scope || {}" />
         </template>
     </FloatingVueDropdown>
 </template>
@@ -20,8 +23,10 @@
 <script setup>
 import { useVariantClasses } from '../../../composables/variantClasses'
 import { Dropdown as FloatingVueDropdown } from 'floating-vue'
-import { onBeforeUnmount, ref } from 'vue'
+import { onBeforeUnmount, ref, useSlots } from 'vue'
 import 'floating-vue/dist/style.css'
+
+const slots = useSlots()
 
 const props = defineProps({
     variant: {
@@ -79,8 +84,16 @@ const popoverKeydown = (e) => {
 const popoverClick = (e) => {
     const popover = popoverRef.value;
 
-    if (!popover || e.target.classList.contains('dropdown-trigger') || e.target.classList.contains('disabled')) {
+    if (!popover || e.target.classList.contains('v-popper') || e.target.classList.contains('disabled')) {
         return;
+    }
+
+    let target = e.target;
+    while (target) {
+        if (target.getAttribute('data-slot') === 'default') {
+            return;
+        }
+        target = target.parentElement;
     }
 
     const items = [...popover.$refs.popperContent.$el.querySelectorAll(props.itemSelector)];
@@ -113,7 +126,7 @@ onBeforeUnmount(() => {
     document.removeEventListener('keydown', popoverKeydown);
     document.removeEventListener('click', popoverClick);
 });
-</script>
+</script> 
 
 <style>
 .v-popper--theme-dropdown-menu .v-popper__arrow-container {
