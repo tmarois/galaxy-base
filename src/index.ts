@@ -10,5 +10,6 @@ export { default as Pagination } from './components/Elements/Pagination/Paginati
 export { default as LoaderSpinner } from './components/Elements/Loader/LoaderSpinner.vue'
 export { default as LoaderLinear } from './components/Elements/Loader/LoaderLinear.vue'
 export { default as LoaderProgress } from './components/Elements/Loader/LoaderProgress.vue'
+export { default as Label } from './components/Forms/Label/Label.vue'
 
 export { useVariantClasses, setVariantClasses } from './composables/variantClasses.ts'

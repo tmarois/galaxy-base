@@ -121,5 +121,15 @@ export const variants = {
             baseText: 'text-sm text-gray-500',
             currentPageText: 'text-black'
         }
+    },
+    'Label' : {
+        default: {
+            base: 'flex items-center select-none cursor-pointer',
+            theme: 'text-sm font-medium text-gray-800',
+            disabled: '!cursor-not-allowed !text-gray-400',
+            errors: '!text-red-600',
+            iconSize: 'w-4 h-4',
+            icon: 'text-primary-600'
+        }
     }
 }

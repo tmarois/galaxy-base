@@ -76,6 +76,7 @@ function getTables() {
 
 function getForms() {
 	return [
+		{ text: 'Label', link: 'components/label' },
 		{ text: '*Input', link: 'components/input' },
 		{ text: '*Checkbox', link: 'components/checkbox' },
 		{ text: '*Toggle', link: 'components/toggle' },
