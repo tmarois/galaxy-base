@@ -13,8 +13,8 @@
         :popper-class="[variantClasses.size, variantClasses.theme]"
     >
         <template v-for="(_, slot) in $slots" #[slot]="scope">
-            <div v-if="slot==='default'" class="inline-block relative" :data-slot="slot" :key="slot">
-                <slot :name="slot" v-bind="scope || {}" />
+            <div v-if="slot==='default'" class="inline-block relative" :data-slot="slot" :key="slot" v-bind="scope || {}" @click.prevent.stop="">
+                <slot :name="slot" />
             </div>
             <slot v-else :name="slot" v-bind="scope || {}" />
         </template>
@@ -28,7 +28,6 @@ import { onBeforeUnmount, ref, useSlots, provide, computed } from 'vue'
 import 'floating-vue/dist/style.css'
 
 const slots = useSlots()
-
 const props = defineProps({
     variant: {
         type: String,
@@ -100,6 +99,10 @@ const popoverClick = (e) => {
             return;
         }
         target = target.parentElement;
+
+        if (target === null) {
+            break;
+        }
     }
 
     const items = [...popover.$refs.popperContent.$el.querySelectorAll(props.itemSelector)];
