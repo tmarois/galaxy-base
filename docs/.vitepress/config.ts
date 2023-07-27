@@ -17,11 +17,33 @@ function buildSidebar() {
 				...getComponents(),
 			],
 		},
+		{
+			text: 'Form',
+			collapsible: true,
+			items: [
+				...getForms(),
+			],
+		},
+		{
+			text: 'Overlay',
+			collapsible: true,
+			items: [
+				...getOverlays(),
+			],
+		},
+		{
+			text: 'Table',
+			collapsible: true,
+			items: [
+				...getTables(),
+			],
+		},
 	]
 }
 
 function getComponents() {
 	return [
+		{ text: '*Alert', link: 'components/alert' },
 		{ text: 'Avatar', link: 'components/avatar' },
 		{ text: 'Avatar Group', link: 'components/avatar-group' },
 		{ text: 'Badge', link: 'components/badge' },
@@ -31,22 +53,35 @@ function getComponents() {
 		{ text: 'Pagination', link: 'components/pagination' },
 		{ text: 'Dropdown', link: 'components/dropdown' },
 		{ text: 'Tooltip', link: 'components/tooltip' },
+		{ text: '*Tabs', link: 'components/tabs' },
+		{ text: '*ListGroup', link: 'components/list-group' },
 		{ text: 'Loader Spinner', link: 'components/loader-spinner' },
 		{ text: 'Loader Linear', link: 'components/loader-linear' },
 		{ text: 'Loader Progress', link: 'components/loader-progress' },
 	]
 }
 
-function getFormComponents() {
+function getOverlays() {
 	return [
-		{ text: 'Input', link: 'components/input' },
-		{ text: 'FileInput', link: 'components/fileInput' },
-		{ text: 'Checkbox', link: 'components/checkbox' },
-		{ text: 'Select', link: 'components/select' },
-		{ text: 'Toggle', link: 'components/toggle' },
-		{ text: 'Textarea', link: 'components/textarea' },
-		{ text: 'Range', link: 'components/range' },
-		{ text: 'Radio', link: 'components/radio' },
+		{ text: '*Modal', link: 'components/modal' },
+		{ text: '*Drawer', link: 'components/drawer' }
+	]
+}
+
+function getTables() {
+	return [
+		{ text: '*Table', link: 'components/table' },
+	]
+}
+
+function getForms() {
+	return [
+		{ text: '*Input', link: 'components/input' },
+		{ text: '*Checkbox', link: 'components/checkbox' },
+		{ text: '*Toggle', link: 'components/toggle' },
+		{ text: '*Select', link: 'components/select' },
+		// { text: 'Range', link: 'components/range' },
+		// { text: 'FileInput', link: 'components/range' },
 	]
 }
 
