@@ -7,9 +7,12 @@ export const variants = {
             panelWrapperGrouped: '',
             panel: 'p-4 border cursor-pointer select-none',
             panelTheme: 'border-gray-200 bg-gray-50 hover:bg-gray-100',
+            panelDisabled: '!cursor-not-allowed !text-gray-300 hover:!bg-gray-50',
             panelActive: '!bg-gray-100',
             panelTitle: 'text-md',
+            panelTitleDisabled: '',
             panelArrowWrapper: 'text-gray-600',
+            panelArrowWrapperDisabled: '!text-gray-300',
             panelArrowSize: 'w-4 h-4',
             panelContent: 'p-4 border border-gray-200 border-t-0'
         }

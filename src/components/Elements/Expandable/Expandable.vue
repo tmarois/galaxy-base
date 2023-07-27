@@ -9,22 +9,33 @@
                 [variantClasses.panel] : true,
                 [variantClasses.panelTheme] : true,
                 [variantClasses.panelActive]: isOpen,
+                [variantClasses.panelDisabled]: props.disabled
                 // 'rounded': !isGroup,
                 // 'rounded-b-none': isOpen,
             }" 
             @click="triggerOpen"
         >
-            <div v-if="arrowPosition==='start' && !props.arrowHide" :class="['mr-2',variantClasses.panelArrowWrapper]">
+            <div v-if="arrowPosition==='start' && !props.arrowHide" :class="{
+                'mr-2': true,
+                [variantClasses.panelArrowWrapper]: true,
+                [variantClasses.panelArrowWrapperDisabled]: props.disabled
+            }">
                 <slot name="arrow-start">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" :class="[variantClasses.panelArrowSize, { 'rotate-0': !isOpen, 'rotate-90': isOpen }]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </slot>
             </div>
-            <div class="grow" :class="variantClasses.panelTitle">
+            <div class="grow" :class="{
+                [variantClasses.panelTitle]: true,
+                [variantClasses.panelTitleDisabled]: props.disabled,
+            }">
                 <slot name="title">{{ props.title }}</slot>
             </div>
-            <div v-if="arrowPosition==='end' && !props.arrowHide" :class="variantClasses.panelArrowWrapper">
+            <div v-if="arrowPosition==='end' && !props.arrowHide" :class="{
+                [variantClasses.panelArrowWrapper]: true,
+                [variantClasses.panelArrowWrapperDisabled]: props.disabled
+            }">
                 <slot name="arrow-end">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" :class="[variantClasses.panelArrowSize, { 'rotate-0': !isOpen, 'rotate-180': isOpen }]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -82,6 +93,10 @@ const props = defineProps({
         type: String,
         default: null
     },
+    disabled: {
+        type: Boolean,
+        default: false
+    },
     arrowHide: {
         type: Boolean,
         default: false,
@@ -113,9 +128,11 @@ if (isGroup) {
 }
 
 const triggerOpen = () => {
-    isOpen.value = !isOpen.value
-    if (isGroup && isOpen.value===true) {
-        sharedActiveExpand.value = id
+    if (!props.disabled) {
+        isOpen.value = !isOpen.value
+        if (isGroup && isOpen.value===true) {
+            sharedActiveExpand.value = id
+        }
     }
 }
 const beforeEnter = (el) => {

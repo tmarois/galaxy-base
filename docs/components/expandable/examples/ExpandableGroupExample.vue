@@ -35,7 +35,7 @@
                 </div>
             </Expandable>
 
-            <Expandable title="Title 3" :arrowPosition="arrowPosition" :arrowHide="arrowHide">
+            <Expandable title="Title 3 (disabled)" :arrowPosition="arrowPosition" :arrowHide="arrowHide" disabled>
                 <div>
                     <div>
                         This is the content I want to hide inside this panel. 
@@ -51,6 +51,24 @@
                     </div>
                 </div>
             </Expandable>
+
+            <Expandable title="Title 4" :arrowPosition="arrowPosition" :arrowHide="arrowHide">
+                <div>
+                    <div>
+                        This is the content I want to hide inside this panel. 
+                    </div>
+                    <div>
+                        This is the content I want to hide inside this panel. 
+                    </div>
+                    <div>
+                        This is the content I want to hide inside this panel. 
+                    </div>
+                    <div>
+                        This is the content I want to hide inside this panel. 
+                    </div>
+                </div>
+            </Expandable>
+
         </ExpandableGroup>
 	</div>
 </template>
