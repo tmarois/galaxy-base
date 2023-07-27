@@ -16,25 +16,10 @@ import { Dropdown } from 'galaxy-vue'
 
 <DropdownExample />
 
-```vue
-<template>
-    <Dropdown>
-
-    </Dropdown>
-</template>
-```
-
 ## With Menu
 
 <DropdownMenuExample />
 
-```vue
-<template>
-    <Dropdown>
-
-    </Dropdown>
-</template>
-```
 
 ## Props
 Props that you can pass into the component

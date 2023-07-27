@@ -28,8 +28,15 @@
         }">
             <slot />
         </span>
-        <span v-if="slots?.default && slots['icon-after']" class="ml-2" :class="variantClasses.iconSize">
-            <slot name="icon-after" />
+        <span v-if="slots?.default && (slots['icon-after'] || isDropdown && isDropdownWithArrow)" class="ml-2" :class="variantClasses.iconSize">
+            <slot name="icon-after">
+                <svg v-if="isDropdown && isDropdownWithArrow && isDropdownOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-auto">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                </svg>
+                <svg v-else-if="isDropdown && isDropdownWithArrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-auto">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+            </slot>
         </span>
     </component>
 </template>
@@ -158,6 +165,9 @@ const isIconOnly = computed(() => {
 
 const isGrouped = inject('IS_BUTTON_GROUP', 0);
 const isResponsive = inject('IS_BUTTON_GROUP_RESPONSIVE', 0);
+const isDropdown = inject('IS_DROPDOWN', 0);
+const isDropdownOpen = inject('IS_DROPDOWN_OPEN', 0);
+const isDropdownWithArrow = inject('IS_DROPDOWN_ARROW', 0);
 </script>
 
 <style>

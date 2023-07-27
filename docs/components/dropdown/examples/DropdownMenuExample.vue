@@ -1,14 +1,7 @@
 <template>
 	<div class="w-full vp-raw p-8 bg-white border-2 border-gray-300 rounded">
-		<Dropdown>
-            <Button>
-              Dropdown Menu
-              <template v-slot:icon-after>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-auto h-auto">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-              </template>
-            </Button>
+		<Dropdown arrow>
+            <Button>Dropdown Menu</Button>
 
             <template #popper>
               <ul class="py-1 text-gray-70">

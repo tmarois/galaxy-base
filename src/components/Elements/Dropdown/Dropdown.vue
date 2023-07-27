@@ -8,6 +8,7 @@
         auto-hide 
         @show="onShow" 
         @hide="onHide"
+        v-model:shown="isMenuShown"
         :class="variantClasses.wrapper"
         :popper-class="[variantClasses.size, variantClasses.theme]"
     >
@@ -23,7 +24,7 @@
 <script setup>
 import { useVariantClasses } from '../../../composables/variantClasses'
 import { Dropdown as FloatingVueDropdown } from 'floating-vue'
-import { onBeforeUnmount, ref, useSlots } from 'vue'
+import { onBeforeUnmount, ref, useSlots, provide, computed } from 'vue'
 import 'floating-vue/dist/style.css'
 
 const slots = useSlots()
@@ -45,6 +46,10 @@ const props = defineProps({
         type: Number,
         default: 14
     },
+    arrow: {
+        type: Boolean,
+        default: false
+    },
     itemSelector: {
         type: String,
         default: 'li > a:not(.disabled)',
@@ -52,6 +57,7 @@ const props = defineProps({
 });
 
 const popoverRef = ref(null);
+const isMenuShown = ref(false);
 const variantClasses = useVariantClasses('Dropdown', props.variant, props.classes);
 
 const popoverKeydown = (e) => {
@@ -126,6 +132,10 @@ onBeforeUnmount(() => {
     document.removeEventListener('keydown', popoverKeydown);
     document.removeEventListener('click', popoverClick);
 });
+
+provide('IS_DROPDOWN', 1);
+provide('IS_DROPDOWN_OPEN', isMenuShown);
+provide('IS_DROPDOWN_ARROW', props.arrow);
 </script> 
 
 <style>
