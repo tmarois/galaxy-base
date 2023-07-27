@@ -48,7 +48,7 @@ function getComponents() {
 		{ text: 'Avatar Group', link: 'components/avatar-group' },
 		{ text: 'Badge', link: 'components/badge' },
 		{ text: 'Button', link: 'components/button' },
-		{ text: 'ButtonGroup', link: 'components/button-group' },
+		{ text: 'Button Group', link: 'components/button-group' },
 		{ text: 'Card', link: 'components/card' },
 		{ text: 'Pagination', link: 'components/pagination' },
 		{ text: 'Dropdown', link: 'components/dropdown' },

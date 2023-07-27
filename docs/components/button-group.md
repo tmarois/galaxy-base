@@ -2,7 +2,7 @@
 import ButtonGroupExample from './button/examples/ButtonGroupExample.vue'
 </script>
 
-# Avatar Group
+# Button Group
 
 ## Example
 <ButtonGroupExample />
