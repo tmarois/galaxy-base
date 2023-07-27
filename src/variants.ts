@@ -68,7 +68,7 @@ export const variants = {
     },
     'ButtonGroup' : {
         default: {
-            content: 'btn-group inline-flex -space-x-1 shadow'
+            content: 'btn-group inline-flex shadow'
         }
     },
     'LoaderSpinner' : {
