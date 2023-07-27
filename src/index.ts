@@ -1,3 +1,5 @@
+export { default as Expandable } from './components/Elements/Expandable/Expandable.vue'
+export { default as ExpandableGroup } from './components/Elements/Expandable/ExpandableGroup.vue'
 export { default as Avatar } from './components/Elements/Avatar/Avatar.vue'
 export { default as AvatarGroup } from './components/Elements/Avatar/AvatarGroup.vue'
 export { default as Badge } from './components/Elements/Badge/Badge.vue'

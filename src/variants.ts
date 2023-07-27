@@ -1,4 +1,18 @@
 export const variants = {
+    'Expandable': {
+        default: {
+            group: '',
+            groupTheme: 'shadow',
+            panelWrapperNotGrouped: 'shadow',
+            panelWrapperGrouped: '',
+            panel: 'p-4 border cursor-pointer select-none',
+            panelTheme: 'border-gray-200 bg-gray-50 hover:bg-gray-100',
+            panelActive: '!bg-gray-100',
+            panelTitle: '',
+            panelArrowWrapper: 'text-gray-600',
+            panelArrowSize: 'w-4 h-4'
+        }
+    },
     'Avatar': {
         default: {
             wrapper: 'relative inline-flex',
