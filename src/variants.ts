@@ -114,5 +114,11 @@ export const variants = {
             wrapper: 'inline',
             theme: 'bg-white border rounded shadow-md',
         }
+    },
+    'Pagination' : {
+        default: {
+            baseText: 'text-sm text-gray-500',
+            currentPageText: 'text-black'
+        }
     }
 }

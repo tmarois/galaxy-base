@@ -1,36 +1,14 @@
 <script setup>
-import TooltipExample from './tooltip/examples/TooltipExample.vue'
+import PaginationExample from './pagination/examples/PaginationExample.vue'
 </script>
 
 # Pagination
 
-## Import
-```vue
-<script setup>
-import { Pagination } from 'galaxy-vue'
-</script>
-```
-
 ## Default Pagination
+<PaginationExample />
 
-<TooltipExample />
+## With Next and Previous
+<PaginationExample nextPrevButtons />
 
-```vue
-<template>
-    <Pagination :page="1" :perPage="20" :total="100" />
-</template>
-```
-
-## Props
-Props that you can pass into the component
-
-```js
-
-```
-
-## Classes
-Override the defaults in your variants to customize the look and theme
-
-```js
-
-```
+## Load More
+<PaginationExample loadMore />
