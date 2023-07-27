@@ -13,6 +13,7 @@
             </div>
         </div>
         <div :class="[variantClasses.contentWrapper, variantClasses.contentTheme]">
+            <div v-if="props.disabled" :class="variantClasses.contentDisabled"></div>
             <div 
                 v-if="!props.detachedHeader && (props.title || slots.header || slots.actions)" 
                 :class="[variantClasses.headerWrapper, variantClasses.headerTheme, { [variantClasses.padding] : !props.removeHeaderPadding && !props.removePadding }]"
@@ -28,7 +29,7 @@
                     <slot name="actions" />
                 </div>
             </div>
-            <LoaderLinear v-if="props.loading" :classes="{base: 'inline-block w-full overflow-hidden relative -mt-1'}" :variant="variantLoader" />
+            <LoaderLinear v-if="props.loading" :classes="{base: 'inline-block w-full overflow-hidden relative -mt-1 z-10'}" :variant="variantLoader" />
             <div :class="[variantClasses.body, { [variantClasses.padding] : !props.removeBodyPadding && !props.removePadding }]">
                 <slot />
             </div>
@@ -59,6 +60,10 @@ const props = defineProps({
         default: () => {}
     },
     loading: {
+        type: Boolean,
+        default: false
+    },
+    disabled: {
         type: Boolean,
         default: false
     },

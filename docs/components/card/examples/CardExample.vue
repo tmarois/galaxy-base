@@ -4,6 +4,7 @@
             :loading="props.loading"
             :title="props.title"
             :subtitle="props.subtitle"
+            :disabled="props.disabled"
         >
             The card content
         </Card>
@@ -14,6 +15,10 @@ import { defineProps } from 'vue'
 import { Card } from '../../../../src/index'
 const props = defineProps({
     loading: {
+        type: Boolean,
+        default: false
+    },
+    disabled: {
         type: Boolean,
         default: false
     },

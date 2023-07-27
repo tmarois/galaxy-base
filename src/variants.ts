@@ -97,6 +97,7 @@ export const variants = {
             headerActions: 'flex items-center',
             contentWrapper: 'flex flex-col w-full',
             contentTheme: 'rounded shadow border border-gray-200 bg-white',
+            contentDisabled: 'absolute top-0 left-0 right-0 bottom-0 bg-white opacity-60',
             body: 'grow',
             footerTheme: 'border-t border-gray-300',
             padding: 'p-4'

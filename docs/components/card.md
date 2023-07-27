@@ -14,24 +14,14 @@ import { Card } from 'galaxy-vue'
 ```
 
 ## Default Card
-
 <CardExample />
 
-```vue
-<template>
-    <Card>The card content</Card>
-</template>
-```
-
-## Loading Card
+## With loading
 
 <CardExample loading />
 
-```vue
-<template>
-    <Card loading>The card content</Card>
-</template>
-```
+## Disabled with loading
+<CardExample loading disabled />
 
 ## Header Title
 
