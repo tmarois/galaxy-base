@@ -8,9 +8,10 @@ export const variants = {
             panel: 'p-4 border cursor-pointer select-none',
             panelTheme: 'border-gray-200 bg-gray-50 hover:bg-gray-100',
             panelActive: '!bg-gray-100',
-            panelTitle: '',
+            panelTitle: 'text-md',
             panelArrowWrapper: 'text-gray-600',
-            panelArrowSize: 'w-4 h-4'
+            panelArrowSize: 'w-4 h-4',
+            panelContent: 'p-4 border border-gray-200 border-t-0'
         }
     },
     'Avatar': {

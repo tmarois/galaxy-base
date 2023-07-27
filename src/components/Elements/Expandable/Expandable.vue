@@ -38,7 +38,7 @@
             @before-leave="beforeLeave" 
             @leave="leave"
         >
-            <div v-show="isOpen" ref="content" class="overflow-hidden p-4 border border-gray-200 border-t-0">
+            <div v-show="isOpen" ref="content" class="overflow-hidden" :class="variantClasses.panelContent">
                 <slot></slot>
             </div>
         </transition>
