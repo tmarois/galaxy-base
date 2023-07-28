@@ -63,7 +63,7 @@
     height: 0;
 }
 .rotate-180 {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     transition: transform 0.2s ease-in-out;
 }
 .rotate-90 {

@@ -124,7 +124,7 @@ export const variants = {
     'Dropdown' : {
         default: {
             wrapper: 'inline',
-            theme: 'bg-white border rounded shadow-md',
+            theme: 'bg-white rounded shadow-md',
             size: 'w-64'
         }
     },
@@ -148,6 +148,33 @@ export const variants = {
             errors: '!text-red-600',
             iconSize: 'w-4 h-4',
             icon: 'text-primary-600'
+        }
+    },
+    'List' : {
+        default: {
+            listGroup: 'overflow-hidden border rounded',
+            listGroupColor: 'text-gray-900 bg-white border-gray-200',
+            listGroupText: 'text-md font-normal',
+            listItem: 'inline-flex block items-center w-full border-b',
+            listItemSize: 'px-4 py-2 ',
+            listItemTheme: 'border-gray-200',
+            listItemHover: 'cursor-pointer hover:bg-gray-100',
+            listItemDisabled: 'cursor-not-allowed bg-gray-50 text-gray-400',
+            listItemBefore: 'w-5 h-5 text-gray-400 mr-2 flex items-center',
+            listItemAfter: 'w-5 h-5 text-gray-400 flex items-center'
+        },
+        menu: {
+            listGroup: 'overflow-hidden rounded border space-y-1 py-1',
+            listGroupColor: 'text-gray-600 bg-white border-gray-200',
+            listGroupText: 'text-sm font-normal',
+            listItem: 'inline-flex block items-center w-full',
+            listItemSize: 'px-4 py-2 ',
+            listItemTheme: '',
+            listItemHover: 'cursor-pointer hover:bg-gray-100',
+            listItemDisabled: 'cursor-not-allowed bg-gray-50 text-gray-400',
+            listItemDivider: 'bg-gray-200 h-[1px]',
+            listItemBefore: 'w-5 h-5 text-gray-400 mr-2 flex items-center',
+            listItemAfter: 'w-4 h-4 text-gray-400 flex items-center'
         }
     }
 }

@@ -51,7 +51,7 @@ const props = defineProps({
     },
     itemSelector: {
         type: String,
-        default: 'li > a:not(.disabled)',
+        default: '.list--item:not(.disabled)',
     },
 });
 
@@ -94,19 +94,26 @@ const popoverClick = (e) => {
     }
 
     let target = e.target;
+    let found = true;
     while (target) {
         if (target.getAttribute('data-slot') === 'default') {
             return;
         }
+        if (target.classList.contains('list--item')) {
+            found=false;
+            break;
+        }
         target = target.parentElement;
-
         if (target === null) {
             break;
         }
     }
 
-    const items = [...popover.$refs.popperContent.$el.querySelectorAll(props.itemSelector)];
+    if (found) {
+        return;
+    }
 
+    const items = [...popover.$refs.popperContent.$el.querySelectorAll(props.itemSelector)];
     if (!items.length) {
         return;
     }
