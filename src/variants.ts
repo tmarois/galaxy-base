@@ -6,7 +6,7 @@ export const variants = {
             panelWrapperNotGrouped: 'shadow',
             panelWrapperGrouped: '',
             panel: 'p-4 border cursor-pointer select-none',
-            panelTheme: 'border-gray-200 bg-gray-50 hover:bg-gray-100',
+            panelTheme: 'border-gray-200 hover:bg-gray-50',
             panelDisabled: '!cursor-not-allowed !text-gray-300 hover:!bg-gray-50',
             panelActive: '!bg-gray-100',
             panelTitle: 'text-md',
@@ -159,6 +159,7 @@ export const variants = {
             listItemSize: 'px-4 py-2 ',
             listItemTheme: 'border-gray-200',
             listItemHover: 'cursor-pointer hover:bg-gray-100',
+            listItemDivider: 'bg-gray-200',
             listItemDisabled: 'cursor-not-allowed bg-gray-50 text-gray-400',
             listItemBefore: 'w-5 h-5 text-gray-400 mr-2 flex items-center',
             listItemAfter: 'w-5 h-5 text-gray-400 flex items-center'
@@ -172,7 +173,7 @@ export const variants = {
             listItemTheme: '',
             listItemHover: 'cursor-pointer hover:bg-gray-100',
             listItemDisabled: 'cursor-not-allowed bg-gray-50 text-gray-400',
-            listItemDivider: 'bg-gray-200 h-[1px]',
+            listItemDivider: 'bg-gray-200',
             listItemBefore: 'w-5 h-5 text-gray-400 mr-2 flex items-center',
             listItemAfter: 'w-4 h-4 text-gray-400 flex items-center'
         }

@@ -2,6 +2,7 @@
     <div :class="{
         'flex items-center': true,
         'list--item': props.hover && !props.disabled && !props.divider,
+        'h-[1px]': props.divider,
         [variantClasses.listItem]: !props.divider,
         [variantClasses.listItemSize]: !props.divider,
         [variantClasses.listItemTheme]: !props.disabled || !props.divider,
