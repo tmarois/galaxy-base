@@ -79,9 +79,10 @@ function getTables() {
 function getForms() {
 	return [
 		{ text: 'Label', link: 'components/label' },
-		{ text: '*Input', link: 'components/input' },
-		{ text: '*Checkbox', link: 'components/checkbox' },
-		{ text: '*Toggle', link: 'components/toggle' },
+		{ text: 'Checkbox', link: 'components/checkbox' },
+		{ text: 'Toggle', link: 'components/toggle' },
+		{ text: 'InputText', link: 'components/input-text' },
+		{ text: 'InputArea', link: 'components/input-area' },
 		{ text: '*Select', link: 'components/select' },
 		// { text: 'Range', link: 'components/range' },
 		// { text: 'FileInput', link: 'components/range' },

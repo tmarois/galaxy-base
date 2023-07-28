@@ -140,16 +140,6 @@ export const variants = {
             currentPageText: 'text-black'
         }
     },
-    'Label' : {
-        default: {
-            base: 'flex items-center select-none cursor-pointer',
-            theme: 'text-sm font-medium text-gray-800',
-            disabled: '!cursor-not-allowed !text-gray-400',
-            errors: '!text-red-600',
-            iconSize: 'w-4 h-4',
-            icon: 'text-primary-600'
-        }
-    },
     'List' : {
         default: {
             listGroup: 'overflow-hidden border rounded',
@@ -177,5 +167,72 @@ export const variants = {
             listItemBefore: 'w-5 h-5 text-gray-400 mr-2 flex items-center',
             listItemAfter: 'w-4 h-4 text-gray-400 flex items-center'
         }
-    }
+    },
+    'Label' : {
+        default: {
+            base: 'flex items-center select-none cursor-pointer',
+            theme: 'text-sm font-medium text-gray-800',
+            disabled: '!cursor-not-allowed !text-gray-400',
+            errors: '!text-red-600',
+            iconSize: 'w-4 h-4',
+            icon: 'text-primary-600'
+        }
+    },
+    'Checkbox' : {
+        default: {
+            wrapper: 'relative flex items-center text-gray-200',
+            inputWrapper: 'elative cursor-pointer flex items-center',
+            inputCheck: 'check-animation rounded focus:ring-0 h-4 w-4 cursor-pointer text-primary-600',
+            inputRadio: 'radio rounded-full focus:ring-0 h-4 w-4 cursor-pointer text-primary-600',
+            inputDisabled: '!cursor-not-allowed text-gray-300 border-gray-300',
+            labelWrapper: 'pl-3 text-sm'
+        }
+    },
+    'Toggle' : {
+        default: {
+            wrapper: 'relative flex items-center text-gray-200',
+            inputWrapper: 'relative cursor-pointer flex items-center',
+            labelFalseWrapper: 'pr-3 text-sm',
+            labelWrapper: 'pl-3 text-sm',
+            switchColor: 'bg-gray-400',
+            switchColorChecked: 'bg-primary-600',
+            switchColorBorderChecked: 'border-primary-600',
+            switchColorBorder: 'border-gray-400',
+            switchDisabledColor: 'bg-gray-100',
+            switchDisabledColorChecked: 'bg-primary-200',
+            switchDisabledColorBorderChecked: 'border-primary-200',
+            switchFalseLabelColorChecked: '!text-gray-400',
+            switchTrueLabelColorChecked: '!text-primary-600',
+            switchTrueLabelColor:'!text-gray-400'
+        }
+    },
+    'InputText': {
+        default: {
+            root: 'relative w-full',
+            inputWrapper: 'grow relative',
+            inputTheme: 'text-gray-800 border-slate-300 hover:bg-slate-50 bg-slate-50 hover:border-slate-400 focus:border-slate-700 hover:text-slate-900',
+            input: 'block w-full rounded text-sm focus:outline-none focus:ring-0 border px-2 py-2',
+            inputPrepend: 'rounded-l-none',
+            prepend: 'inline-flex items-center px-3 text-sm text-gray-800 bg-gray-100 border border-r-0 border-gray-200 rounded-l-md',
+            icon: 'pointer-events-none absolute inset-y-0 left-0 p-2 flex items-center text-gray-500',
+            clearable: 'cursor-pointer absolute inset-y-0 right-0 p-2 flex items-center',
+            counter: 'absolute text-right text-[11px] text-gray-600 right-0.5 -bottom-[21px]',
+            disabled: 'cursor-default bg-gray-100 border-gray-200 focus:border-gray-200',
+            readonly: 'cursor-default',
+            errors: 'border-red-500 focus:border-red-500 text-red-500 hover:text-red-800'
+        }
+    },
+    'InputArea': {
+        default: {
+            root: 'relative w-full',
+            inputWrapper: 'grow relative',
+            inputTheme: 'text-gray-800 border-slate-300 hover:bg-slate-50 bg-slate-50 hover:border-slate-400 focus:border-slate-700 hover:text-slate-900',
+            input: 'block w-full rounded text-sm focus:outline-none focus:ring-0 border px-2 py-2',
+            clearable: 'cursor-pointer absolute right-0 p-2 top-0',
+            counter: 'absolute text-right text-[11px] text-gray-600 right-0.5 -bottom-[21px]',
+            disabled: 'cursor-default bg-gray-100 border-gray-200 focus:border-gray-200',
+            readonly: 'cursor-default',
+            errors: 'border-red-500 focus:border-red-500 text-red-500 hover:text-red-800'
+        }
+    },
 }
