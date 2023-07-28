@@ -1,5 +1,11 @@
 <template>
-    <div class="flex justify-between" :class="variantClasses.baseText">
+    <div class="flex" 
+        :class="{
+            [variantClasses.baseText]: true,
+            'justify-between': !props.hideStats,
+            'justify-center': props.hideStats
+        }"
+    >
         <div v-if="!props.hideStats && !props.loadMore" class="flex flex-row items-center">
             <select
                 name="currentPerPage"

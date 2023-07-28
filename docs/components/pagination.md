@@ -10,5 +10,8 @@ import PaginationExample from './pagination/examples/PaginationExample.vue'
 ## With Next and Previous
 <PaginationExample nextPrevButtons />
 
+## With Hide Stats
+<PaginationExample hideStats />
+
 ## Load More
 <PaginationExample loadMore />

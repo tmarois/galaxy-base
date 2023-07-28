@@ -7,6 +7,7 @@
             :perPage="state.perPage"
             @change="change"
             :loadMore="loadMore"
+            :hideStats="hideStats"
             :nextPrevButtons="nextPrevButtons"
         />
 	</div>
@@ -19,6 +20,10 @@ import { Pagination } from '../../../../src/index'
 
 const props = defineProps({
     loadMore: {
+        type: Boolean,
+        default: false
+    },
+    hideStats: {
         type: Boolean,
         default: false
     },
