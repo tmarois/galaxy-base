@@ -21,5 +21,6 @@ export { default as InputText } from './components/Forms/Input/InputText.vue'
 export { default as InputArea } from './components/Forms/Input/InputArea.vue'
 export { default as Tabs } from './components/Elements/Tabs/Tabs.vue'
 export { default as Tab } from './components/Elements/Tabs/Tab.vue'
+export { default as Table } from './components/Tables/Table/Table.vue'
 
 export { useVariantClasses, setVariantClasses } from './composables/variantClasses.ts'

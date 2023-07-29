@@ -259,4 +259,26 @@ export const variants = {
             errors: 'border-red-500 focus:border-red-500 text-red-500 hover:text-red-800'
         }
     },
+    'Table': {
+        default: {
+            wrapper: '',
+            table: 'min-w-full h-full text-sm text-left text-gray-500 divide-y divide-gray-300',
+            thead: 'bg-gray-100',
+            theadRow: 'divide-x divide-gray-200',
+            theadColumn: 'my-auto px-4 py-2 font-normal whitespace-nowrap uppercase text-gray-700 text-xs align-middle',
+            theadColumnLabel: 'font-bold',
+            theadColumnSortIcon: 'w-3 h-3',
+            theadColumnSortIconSorted: 'text-primary-600',
+            theadColumnSorting: 'sortable cursor-pointer hover:bg-gray-200',
+            theadColumnSorted: 'sorted bg-primary-100 hover:bg-primary-100 text-primary-700',
+            theadColumnSelectAll: 'w-4 px-4 py-2',
+            tbody: 'divide-y divide-gray-200',
+            tbodyRow: 'hover:bg-gray-100 text-gray-800',
+            tbodyRowSelected: '!bg-primary-50',
+            tbodyColumn: 'px-4 py-3',
+            tbodyColumnSelect: 'w-4 px-4 py-3',
+            noData: 'text-center p-3',
+            emptyCellText: 'text-gray-400'
+        }
+    },
 }

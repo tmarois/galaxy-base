@@ -11,7 +11,7 @@ function buildSidebar() {
 			],
 		},
 		{
-			text: 'Components',
+			text: 'Element',
 			collapsible: true,
 			items: [
 				...getComponents(),
@@ -25,17 +25,17 @@ function buildSidebar() {
 			],
 		},
 		{
-			text: 'Overlay',
-			collapsible: true,
-			items: [
-				...getOverlays(),
-			],
-		},
-		{
 			text: 'Table',
 			collapsible: true,
 			items: [
 				...getTables(),
+			],
+		},
+		{
+			text: 'Overlay',
+			collapsible: true,
+			items: [
+				...getOverlays(),
 			],
 		},
 	]
@@ -72,7 +72,7 @@ function getOverlays() {
 
 function getTables() {
 	return [
-		{ text: '*Table', link: 'components/table' },
+		{ text: 'Table', link: 'components/table' },
 	]
 }
 
