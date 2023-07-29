@@ -272,6 +272,7 @@ export const variants = {
             theadColumnSorting: 'sortable cursor-pointer hover:bg-gray-200',
             theadColumnSorted: 'sorted bg-primary-100 hover:bg-primary-100 text-primary-700',
             theadColumnSelectAll: 'w-4 px-4 py-2',
+            tbodyColumnSelectBorder: 'bg-primary-600',
             tbody: 'divide-y divide-gray-200',
             tbodyRow: 'hover:bg-gray-100 text-gray-800',
             tbodyRowSelected: '!bg-primary-50',

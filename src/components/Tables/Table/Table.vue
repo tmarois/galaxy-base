@@ -77,9 +77,14 @@
                 >
                     <td
                         v-if="select"
-                        :class="variantClasses.tbodyColumnSelect"
+                        :class="['relative',variantClasses.tbodyColumnSelect]"
                     >
                         <slot name="column.select">
+                            <div 
+                                v-if="props.selectBorder && state.selection.includes(i)" 
+                                class="absolute inset-y-0 left-0 w-0.5" 
+                                :class="variantClasses.tbodyColumnSelectBorder"></div>
+
                             <div class="flex items-center justify-center">
                                 <Checkbox
                                     :value="state.selection.includes(i)"
@@ -205,6 +210,10 @@ const props = defineProps({
         default: false
     },
     selectOne: {
+        type: Boolean,
+        default: false
+    },
+    selectBorder: {
         type: Boolean,
         default: false
     },

@@ -7,6 +7,7 @@
                 <Table 
                     selectRow
                     select
+                    selectBorder
                     :loading="state.loading"
                     :headers="state.headers"
                     :rows="state.rows"
