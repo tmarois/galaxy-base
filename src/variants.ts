@@ -168,6 +168,30 @@ export const variants = {
             listItemAfter: 'w-4 h-4 text-gray-400 flex items-center'
         }
     },
+    'Tabs': {
+        default: {
+            wrapper: '',
+            tabListWrapper: '',
+            tabList: 'flex space-x-4 items-center',
+            tabItem: 'text-gray-500 rounded px-3 py-2 text-sm font-medium cursor-pointer',
+            tabItemSelected: 'bg-primary-800 text-white rounded px-3 py-2 text-sm font-medium',
+            tabItemDisabled: 'text-gray-400 cursor-not-allowed',
+            tabItemTitle: 'flex items-center',
+            tabContentWrapper: '',
+            tabContent: 'p-4'
+        },
+        underline: {
+            wrapper: '',
+            tabListWrapper: 'border-b border-gray-200',
+            tabList: '-mb-px flex space-x-6 items-center',
+            tabItem: 'cursor-pointer border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-2.5 px-1 text-sm font-medium',
+            tabItemSelected: 'border-primary-500 text-primary-600',
+            tabItemDisabled: 'text-gray-400 cursor-not-allowed',
+            tabItemTitle: 'flex items-center justify-center text-center',
+            tabContentWrapper: '',
+            tabContent: 'p-4'
+        }
+    },
     'Label' : {
         default: {
             base: 'flex items-center select-none cursor-pointer',

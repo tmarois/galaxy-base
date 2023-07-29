@@ -53,7 +53,7 @@ function getComponents() {
 		{ text: 'Pagination', link: 'components/pagination' },
 		{ text: 'Dropdown', link: 'components/dropdown' },
 		{ text: 'Tooltip', link: 'components/tooltip' },
-		{ text: '*Tabs', link: 'components/tabs' },
+		{ text: 'Tabs', link: 'components/tabs' },
 		{ text: 'List', link: 'components/list' },
 		{ text: 'Expandable', link: 'components/expandable' },
 		{ text: 'Expandable Group', link: 'components/expandable-group' },
