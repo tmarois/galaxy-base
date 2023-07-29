@@ -14,7 +14,7 @@
                 >
                     <div :class="variantClasses.tabItemTitle">
                         <template v-if="item.slotContent">
-                            <template v-for="(content, idx) in item.slotContent" :key="idx">
+                            <template v-for="(content, i) in item.slotContent" :key="i">
                                 <component :is="content" />
                             </template>
                         </template>
