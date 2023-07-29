@@ -2,26 +2,28 @@
 
     <div>
         <div class="text-sm text-gray-500 pb-4">Note: Sorting and Pagination are for display purposes of this documentation. You will need to control the data yourself by utilizing the change emits.</div>
-        <div class="w-full vp-raw bg-white border border-gray-200 rounded mb-2 overflow-hidden h-[270px] overflow-y-scroll">
-            <Table 
-                selectRow
-                select
-                :loading="state.loading"
-                :headers="state.headers"
-                :rows="state.rows"
-                @sort="updateSorting"
-                @selection="selection"
-            />
-        </div>
-        <div class="w-full vp-raw bg-white border border-gray-200 rounded mb-4 p-4">
-            <Pagination 
-                :perPage="state.perPage"
-                :page="state.page"
-                :totalItems="500"
-                :itemsShown="state.rows.length"
-                @change="change"
-            />
-        </div>
+        <Card removeBodyPadding class="mb-4">
+            <div class="w-full vp-raw overflow-hidden h-[255px] overflow-y-scroll">
+                <Table 
+                    selectRow
+                    select
+                    :loading="state.loading"
+                    :headers="state.headers"
+                    :rows="state.rows"
+                    @sort="updateSorting"
+                    @selection="selection"
+                />
+            </div>
+            <template #footer>
+                <Pagination 
+                    :perPage="state.perPage"
+                    :page="state.page"
+                    :totalItems="500"
+                    :itemsShown="state.rows.length"
+                    @change="change"
+                />
+            </template>
+        </Card>
         <div class="w-full vp-raw space-y-4">
             <Card :title="`Selected Items: (${state.selection.length})`">
                 {{ state.selection }}
