@@ -7,6 +7,9 @@
 			<Tab name="billing" title="Billing">
 				This is my account billing
 			</Tab>
+			<Tab name="disabled" title="Disabled" disabled>
+				This is my account billing
+			</Tab>
 			<Tab name="settings" title="Settings">
 				This is my account settings
 			</Tab>

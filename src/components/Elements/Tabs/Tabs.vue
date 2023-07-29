@@ -5,10 +5,10 @@
                 <li 
                     v-for="(item, id) in tabs"
                     :key="id"
-                    @click.prevent="tabClick(item.props?.name)"
+                    @click.prevent="tabClick(item.props?.name, item)"
                     :class="{
                         [variantClasses.tabItem]: true,
-                        [variantClasses.tabItemDisabled]: item.props?.disabled,
+                        [variantClasses.tabItemDisabled]: (item.props?.disabled === '' || item.props?.disabled === true),
                         [variantClasses.tabItemSelected]: modelValueRef === item.props?.name,
                     }"
                 >
@@ -100,7 +100,8 @@ const change = (value) => {
     modelValueRef.value = value
 }
 
-function tabClick(value) {
+function tabClick(value, item) {
+    if ((item.props?.disabled === '' || item.props?.disabled === true)) return;
     change(value)
 }
 
