@@ -261,7 +261,7 @@ export const variants = {
     },
     'Table': {
         default: {
-            wrapper: '',
+            wrapper: 'relative',
             table: 'min-w-full h-full text-sm text-left text-gray-500 divide-y divide-gray-300',
             thead: 'bg-gray-100',
             theadRow: 'divide-x divide-gray-200',
@@ -280,6 +280,12 @@ export const variants = {
             tbodyColumnSelect: 'w-4 px-4 py-3',
             noData: 'text-center p-3',
             emptyCellText: 'text-gray-400'
+        }
+    },
+    'Overlay': {
+        default: {
+            base: 'top-0 left-0 bottom-0 right-0 bg-gray-400 bg-opacity-60 z-40',
+            theme: 'bg-black bg-opacity-60'
         }
     },
 }

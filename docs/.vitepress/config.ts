@@ -65,6 +65,7 @@ function getComponents() {
 
 function getOverlays() {
 	return [
+		{ text: 'Overlay', link: 'components/overlay' },
 		{ text: '*Modal', link: 'components/modal' },
 		{ text: '*Drawer', link: 'components/drawer' }
 	]
