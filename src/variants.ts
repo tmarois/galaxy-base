@@ -285,7 +285,7 @@ export const variants = {
     'Overlay': {
         default: {
             base: 'top-0 left-0 bottom-0 right-0 bg-gray-400 bg-opacity-60 z-40',
-            theme: 'bg-black bg-opacity-60'
+            theme: 'bg-gray-400 bg-opacity-60'
         }
     },
 }
