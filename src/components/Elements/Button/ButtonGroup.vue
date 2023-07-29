@@ -31,6 +31,7 @@ const variantClasses = useVariantClasses('ButtonGroup', props.variant, props.cla
 
 provide('IS_BUTTON_GROUP', 1);
 provide('IS_BUTTON_GROUP_RESPONSIVE', props.responsive);
+provide('IS_BUTTON_GROUP_VARIANT', props.variant);
 </script>
 
 <style>

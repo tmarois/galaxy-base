@@ -42,7 +42,7 @@
 </template>
 
 <script setup>
-import { defineProps, useSlots, computed, inject } from 'vue'
+import { defineProps, useSlots, computed, inject, ref } from 'vue'
 import { useVariantClasses } from '../../../composables/variantClasses'
 import LoaderSpinner from '../Loader/LoaderSpinner.vue'
 
@@ -102,7 +102,19 @@ const props = defineProps({
     }
 });
 
-const variantClasses = useVariantClasses('Button', props.variant, props.classes);
+const isGrouped = inject('IS_BUTTON_GROUP', 0);
+const isResponsive = inject('IS_BUTTON_GROUP_RESPONSIVE', 0);
+const isDropdown = inject('IS_DROPDOWN', 0);
+const isDropdownOpen = inject('IS_DROPDOWN_OPEN', 0);
+const isDropdownWithArrow = inject('IS_DROPDOWN_ARROW', 0);
+const isGroupVariant = inject('IS_BUTTON_GROUP_VARIANT', null);
+
+const buttonVariant = ref(props.variant);
+if (isGrouped && isGroupVariant && !props.variant) {
+    buttonVariant.value = isGroupVariant;
+}
+
+const variantClasses = useVariantClasses('Button', buttonVariant.value, props.classes);
 
 const computeClasses = computed(() => {
     return {
@@ -162,12 +174,6 @@ const isIconOnly = computed(() => {
     }
     return false
 });
-
-const isGrouped = inject('IS_BUTTON_GROUP', 0);
-const isResponsive = inject('IS_BUTTON_GROUP_RESPONSIVE', 0);
-const isDropdown = inject('IS_DROPDOWN', 0);
-const isDropdownOpen = inject('IS_DROPDOWN_OPEN', 0);
-const isDropdownWithArrow = inject('IS_DROPDOWN_ARROW', 0);
 </script>
 
 <style>
