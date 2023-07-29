@@ -1,19 +1,21 @@
 <template>
-	<div class="w-full vp-raw bg-white border border-gray-200 rounded ">
-		<Table 
-			:selectOne="props.selectOne"
-			:hideHeader="props.hideHeader"
-			:selectRow="props.selectRow"
-			:select="props.select"
-			:loading="props.loading"
-			:headers="headers"
-			:rows="(props.noData) ? [] : rows"
-		/>
-	</div>
+	<Card removeBodyPadding>
+		<div class="w-full vp-raw">
+			<Table 
+				:selectOne="props.selectOne"
+				:hideHeader="props.hideHeader"
+				:selectRow="props.selectRow"
+				:select="props.select"
+				:loading="props.loading"
+				:headers="headers"
+				:rows="(props.noData) ? [] : rows"
+			/>
+		</div>
+	</Card>
 </template>
 <script setup>
 import { defineProps, ref, reactive } from 'vue'
-import { Table } from '../../../../src/index'
+import { Table, Card } from '../../../../src/index'
 
 const props = defineProps({
     loading: {

@@ -24,7 +24,7 @@
                 />
             </template>
         </Card>
-        <div class="w-full vp-raw space-y-4">
+        <div class="w-full vp-raw space-y-4 text-xs">
             <Card :title="`Selected Items: (${state.selection.length})`">
                 {{ state.selection }}
             </Card>
