@@ -43,7 +43,7 @@ function buildSidebar() {
 
 function getComponents() {
 	return [
-		{ text: '*Alert', link: 'components/alert' },
+		// { text: '*Alert', link: 'components/alert' },
 		{ text: 'Avatar', link: 'components/avatar' },
 		{ text: 'Avatar Group', link: 'components/avatar-group' },
 		{ text: 'Badge', link: 'components/badge' },
