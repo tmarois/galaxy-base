@@ -87,7 +87,6 @@
                                     @click.stop=""
                                     :disabled="props.loading"
                                     :variantCheckbox="props.variantCheckbox"
-                                    :radio="props.selectOne"
                                 />
                             </div>
                         </slot>
