@@ -296,4 +296,11 @@ export const variants = {
             contentTheme: 'bg-white shadow-lg rounded'
         }
     },
+    'Drawer': {
+        default: {
+            base: '',
+            content: 'z-[777] fixed',
+            contentTheme: 'bg-white shadow-lg'
+        }
+    },
 }

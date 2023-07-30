@@ -24,5 +24,6 @@ export { default as Tab } from './components/Elements/Tabs/Tab.vue'
 export { default as Table } from './components/Tables/Table/Table.vue'
 export { default as Backdrop } from './components/Overlays/Backdrop/Backdrop.vue'
 export { default as Modal } from './components/Overlays/Modal/Modal.vue'
+export { default as Drawer } from './components/Overlays/Drawer/Drawer.vue'
 
 export { useVariantClasses, setVariantClasses } from './composables/variantClasses.ts'
