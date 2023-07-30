@@ -6,6 +6,8 @@
             :persist="props.persist" 
             :relative="props.relative" 
             :type="props.type" 
+            :offset="props.offset" 
+            offsetDirection="left"
             @close="close" 
         >
             <div class="h-full w-full p-8">
@@ -46,6 +48,10 @@ const props = defineProps({
     relative: {
         type: Boolean,
         default: false
+    },
+    offset: {
+        type: Number,
+        default: 0
     },
     type: {
         type: String,

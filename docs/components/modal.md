@@ -16,3 +16,6 @@ import ModalModalExample from './modal/examples/ModalModalExample.vue'
 
 ## With Modal Modal
 <ModalModalExample />
+
+<!-- ## With Offset -->
+<!-- <ModalExample :offset="272" /> -->

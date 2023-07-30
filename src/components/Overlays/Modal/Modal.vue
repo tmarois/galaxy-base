@@ -96,8 +96,8 @@ const props = defineProps({
         type: String,
         default: undefined
     },
-    offsetValue: {
-        type: [String, Number],
+    offset: {
+        type: Number,
         default: 0
     },
     offsetDiv: {
@@ -122,17 +122,19 @@ const updateDivOffset = () => {
     state.relativeOffsetPx = null
     if (props.offsetDiv) {
         let mainDivOffset = 0;
-        let mainDiv = document.getElementById(this.offsetDiv);
+        let mainDiv = document.getElementById(props.offsetDiv);
         if (mainDiv) mainDivOffset = mainDiv.offsetWidth;
-        let appDiv  = document.getElementById('app').offsetWidth;
-        let offset  = +(appDiv - mainDivOffset);
-        if (offset) state.relativeOffsetPx = offset;
+        let appDiv  = document.getElementById('app');
+        if (appDiv) {
+            let offset  = +(appDiv.offsetWidth - mainDivOffset);
+            if (offset) state.relativeOffsetPx = offset;
+        }
     }
 }
 
 const widthCalculation = computed(() => {
-    if(props.offsetValue || state.relativeOffsetPx) {
-        return `width: calc(100% - 2em ${props.offsetValue || state.relativeOffsetPx ? `- ${props.offsetValue || state.relativeOffsetPx}px` : ''});`;
+    if(props.offset || state.relativeOffsetPx) {
+        return `width: calc(100% - 2em ${props.offset || state.relativeOffsetPx ? `- ${props.offset || state.relativeOffsetPx}px` : ''});`;
     } else if(props.centerOverflow || props.type === 'full') {
         return `width: calc(100%);`;
     }
@@ -142,10 +144,10 @@ const widthCalculation = computed(() => {
 
 const offsetCalculation = computed(() => {
     if (state.relativeOffsetPx) {
-        if(this.type === 'center') return `left: calc(${state.relativeOffsetPx}px + 1em); right: 1em;`;
+        if(props.type === 'center') return `left: calc(${state.relativeOffsetPx}px + 1em); right: 1em;`;
         else return 'right: 1em;';
-    } else if(props.offsetDirection && this.offsetValue > 0) {
-        return `${props.offsetDirection}: ${props.offsetValue}px; ${oppositeOf(props.offsetDirection)}: 0;`;
+    } else if(props.offsetDirection && props.offset > 0) {
+        return `${props.offsetDirection}: ${props.offset}px; ${oppositeOf(props.offsetDirection)}: 0;`;
     }
 });
 
