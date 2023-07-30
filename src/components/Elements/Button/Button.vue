@@ -200,17 +200,17 @@ const isIconOnly = computed(() => {
 }
 @keyframes button-pop{
     0%{
-        transform:scale(.95)
+        transform:scale(.95);
     }
     40%{
-        transform:scale(1.02)
+        transform:scale(1.02);
     }
     to{
-        transform:scale(1)
+        transform:scale(1);
     }
 }
 .btn:active:hover,.btn:active:focus{
     animation:none;
-    transform:scale(var(--btn-focus-scale,.95))
+    transform:scale(var(--btn-focus-scale,.95));
 }
 </style>

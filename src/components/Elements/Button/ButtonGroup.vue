@@ -44,13 +44,13 @@ provide('IS_BUTTON_GROUP_VARIANT', props.variant);
 
 @layer components {    
     .btn-group > .btn {
-        @apply rounded-none
+        @apply rounded-none;
     }
     .btn-group > .btn, .btn-group > .btn:active:hover, .btn-group > .btn:active:focus {
-        @apply animation-none
+        @apply animation-none;
     }
     .btn-group > .btn:not(:disabled) {
-        @apply border-r border-primary-800
+        @apply border-r border-primary-800;
     }
     .btn-group > .btn:first-child {
         @apply rounded-l;

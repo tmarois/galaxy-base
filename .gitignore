@@ -3,7 +3,6 @@ public_html
 # Vite
 node_modules
 .DS_Store
-dist
 dist_types
 dist-ssr
 *.local

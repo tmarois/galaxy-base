@@ -36,7 +36,7 @@ provide('EXPAND_ACTIVE', expandActive);
 
 @layer components {    
     .expandable-group > .expandable-wrapper .expandable {
-        @apply !rounded-none
+        @apply !rounded-none;
     }
     /* .expandable-group > .expandable:first-child {
         @apply !rounded-t;

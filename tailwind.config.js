@@ -6,9 +6,8 @@ module.exports = {
         './src/**/*.{js,ts,vue}'
     ],
     plugins: [
-        require('flowbite/plugin'),
         require('@tailwindcss/typography'),
-        require('@tailwindcss/forms')
+        require('@tailwindcss/forms'),
     ],
     theme: {
         extend: {
