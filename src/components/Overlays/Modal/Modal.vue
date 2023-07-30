@@ -3,11 +3,12 @@
         :class="{
             [variantClasses.base]: true,
             'overflow-y-scroll': props.scroll,
+            'p-4': (props.type === 'full')
     }">
 		<div :class="{
             [variantClasses.wrapper]: true,
             'min-h-full': props.type !== 'full',
-            'h-full': props.type === 'full'
+            'h-full': props.type === 'full',
         }">
 			<transition name="pop" appear>
 				<div
@@ -19,7 +20,7 @@
                         containerClasses: true,
                         'h-screen': props.type === 'full'
                     }"
-					:style="`${props.maxWidth ? `max-width:${props.maxWidth}px;` : ''} min-width: 300px; ${props.scroll ? 'margin-top: 1em; margin-bottom: 1em;' : 'max-height: calc(100vh);'} ${widthCalculation} ${offsetCalculation};`"
+					:style="`${props.maxWidth ? `max-width:${props.maxWidth}px;` : ''} min-width: 300px; ${props.scroll ? `margin-top: 1em; margin-bottom: 1em;` : `max-height: calc(100vh - ${props.type === 'full' ? '2em' : '0em'});`} ${widthCalculation} ${offsetCalculation};`"
 				
 				>
                     <div class="h-full w-full">

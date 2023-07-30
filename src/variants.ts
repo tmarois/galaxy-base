@@ -24,7 +24,7 @@ export const variants = {
             contentSize: 'w-10 h-10 text-md font-medium',
             contentTheme: 'bg-primary-700 rounded-full text-white',
             contentHover: 'hover:z-10 cursor-pointer',
-            contentGrouped: 'border-2 border-white dark:border-gray-600',
+            contentGrouped: 'border-2 border-white',
             defaultPlaceholderWrapper: 'relative h-full w-full inline-flex justify-center items-center overflow-hidden',
             defaultPlaceholderIcon: 'absolute w-auto h-auto -bottom-1',
             statusDotSizePosition: 'bottom-0 left-7 absolute w-3 h-3',
