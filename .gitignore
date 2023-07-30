@@ -5,6 +5,7 @@ node_modules
 .DS_Store
 dist_types
 dist-ssr
+docs/.vitepress/dist/*
 *.local
 
 # Rollup Bundle Visualizer
