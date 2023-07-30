@@ -1,6 +1,6 @@
 <template>
 	<div :class="variantClasses.base">
-		<transition :name="`slide-${type}`" appear>
+		<transition :name="`slide-${position}`" appear>
 			<div
                 v-if="state.localShowing"
 				:class="[containerClasses, variantClasses.content, variantClasses.contentTheme]"
@@ -40,7 +40,7 @@ const props = defineProps({
         type: Object,
         default: () => {}
     },
-    type: {
+    position: {
         type: String,
         default: 'right'
     },
@@ -81,7 +81,7 @@ const containerClasses = computed(() => {
         'sm:max-w-xl'
     ];
     
-    switch(props.type) {
+    switch(props.position) {
         case 'right': 
             c = c.concat(['right-0']);
             break;

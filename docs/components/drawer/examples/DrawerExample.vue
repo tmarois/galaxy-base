@@ -5,6 +5,7 @@
             :show="state.show" 
             :persist="props.persist" 
             :relative="props.relative" 
+            :position="props.position"
             @close="close" 
         >
             <div class="h-full w-full p-8">
@@ -12,6 +13,12 @@
                     <div v-if="props.persist === true" class="text-center">
                         <div>This Drawer is <span class="font-bold">Persist</span></div>
                         <div class="text-gray-500 text-sm">*Backdrop click disabled</div>
+                        <div class="flex justify-center mt-6">
+                            <Button outlined @click="close">Close Drawer</Button>
+                        </div>
+                    </div>
+                    <div v-else-if="props.position === 'left'" class="text-center">
+                        <div>This Drawer is <span class="font-bold">Left Position</span></div>
                         <div class="flex justify-center mt-6">
                             <Button outlined @click="close">Close Drawer</Button>
                         </div>
@@ -67,6 +74,10 @@ const props = defineProps({
     withModal: {
         type: Boolean,
         default: false
+    },
+    position: {
+        type: String,
+        default: 'right'
     },
 });
 

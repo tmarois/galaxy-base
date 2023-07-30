@@ -9,6 +9,9 @@ The drawer will be full screen on mobile (sm) devices.
 
 <DrawerExample />
 
+## With Left Position
+<DrawerExample position="left" /> 
+
 ## With Persist
 <DrawerExample persist /> 
 
