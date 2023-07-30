@@ -14,6 +14,10 @@
       "import": "./dist/galaxy-vue.mjs",
       "require": "./dist/galaxy-vue.umd.js"
     },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    },
     "./*": "./dist/*"
   },
   "scripts": {

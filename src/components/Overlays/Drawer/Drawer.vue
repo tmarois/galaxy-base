@@ -1,12 +1,12 @@
 <template>
-	<div :class="variantClasses.base">
+	<div :class="[variantClasses.base]">
 		<transition :name="`slide-${position}`" appear>
 			<div
                 v-if="state.localShowing"
-				:class="[containerClasses, variantClasses.content, variantClasses.contentTheme]"
+				:class="[containerClasses, variantClasses.content, variantClasses.contentTheme, 'p-4']"
 				:style="`${props.maxWidth ? `max-width: ${props.maxWidth}px;` : ''} min-width: 300px; height: 100%;`"
 			>
-				<slot></slot>
+				<slot />
 			</div>
 		</transition>
 		<Backdrop 
@@ -60,6 +60,10 @@ const props = defineProps({
         type: Boolean,
         default: false
     },
+    edges: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const variantClasses = useVariantClasses('Drawer', props.variant, props.classes);

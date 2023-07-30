@@ -6,6 +6,7 @@
             :persist="props.persist" 
             :relative="props.relative" 
             :position="props.position"
+            :edges="props.withEdges"
             @close="close" 
         >
             <div class="h-full w-full p-8">
@@ -79,6 +80,10 @@ const props = defineProps({
         type: String,
         default: 'right'
     },
+    withEdges: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const state = reactive({
