@@ -16,7 +16,13 @@
             <div v-if="slot==='default'" class="inline-block relative" :data-slot="slot" :key="slot" v-bind="scope || {}" @click.prevent.stop="">
                 <slot :name="slot" />
             </div>
-            <slot v-else :name="slot" v-bind="scope || {}" />
+            <template v-else>
+                <transition name="dropdown" appear :key="slot" >
+                    <div v-show="isMenuShown">
+                        <slot :name="slot" v-bind="scope || {}" />
+                    </div>
+                </transition>
+            </template>
         </template>
     </FloatingVueDropdown>
 </template>
@@ -151,5 +157,19 @@ provide('IS_DROPDOWN_ARROW', props.arrow);
 <style>
 .v-popper--theme-dropdown-menu .v-popper__arrow-container {
     display: none;
+}
+.dropdown-enter-from, .dropdown-leave-to {
+    z-index: 50;
+    opacity: 0;
+    transform: translateY(-5%);
+}
+.dropdown-enter-active, .dropdown-leave-active {
+    transition: all .2s cubic-bezier(.25,.8,.25,1);
+    z-index: 50;
+}
+.dropdown-enter-to, .dropdown-leave-from {
+    z-index: 50;
+    opacity: 1;
+    transform: translateY(0);
 }
 </style>
