@@ -3,7 +3,9 @@
         <div
             v-if="props.show"
             @click="close"
+            :data-backdrop-id="props.id"
             :class="{
+                'backdrop': true,
                 [variantClasses.base]: true,
                 [variantClasses.theme]: true,
                 'cursor-pointer': !props.persist,
@@ -26,6 +28,10 @@ const props = defineProps({
     classes: {
         type: Object,
         default: () => {}
+    },
+    id: {
+        type: String,
+        default: null
     },
     persist: {
         type: Boolean,

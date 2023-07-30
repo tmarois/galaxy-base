@@ -290,10 +290,10 @@ export const variants = {
     },
     'Modal': {
         default: {
-            base: 'absolute inset-0 w-full h-full',
-            wrapper: 'flex items-center min-h-full',
-            content: 'z-50 transition-all duration-300 ease-in-out',
-            contentTheme: 'bg-white z-50 shadow-lg rounded'
+            base: 'fixed inset-0 w-full h-screen z-[100]',
+            wrapper: 'flex items-center justify-center',
+            content: 'z-[999] transition-all duration-300 ease-in-out overflow-hidden',
+            contentTheme: 'bg-white shadow-lg rounded'
         }
     },
 }
