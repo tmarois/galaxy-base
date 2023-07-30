@@ -1,13 +1,13 @@
 <template>
 	<div class="w-full vp-raw p-8 bg-white border-2 border-gray-300 rounded relative">
-        <Button @click="state.showOverlay=true">Show Overlay</Button>
-        <Overlay :show="state.showOverlay" :persist="props.persist" @close="closeOverlay" :relative="props.relative" />
+        <Button @click="state.showBackdrop=true">Show Backdrop</Button>
+        <Backdrop :show="state.showBackdrop" :persist="props.persist" @close="closeBackdrop" :relative="props.relative" />
 	</div>
 </template>
 
 <script setup>
 import { defineProps, reactive } from 'vue'
-import { Overlay, Button } from '../../../../src/index'
+import { Backdrop, Button } from '../../../../src/index'
 const props = defineProps({
     persist: {
         type: Boolean,
@@ -20,11 +20,11 @@ const props = defineProps({
 });
 
 const state = reactive({
-    showOverlay: false
+    showBackdrop: false
 });
 
-const closeOverlay = () => {
-    state.showOverlay = false
+const closeBackdrop = () => {
+    state.showBackdrop = false
 }
 
 </script>

@@ -22,6 +22,6 @@ export { default as InputArea } from './components/Forms/Input/InputArea.vue'
 export { default as Tabs } from './components/Elements/Tabs/Tabs.vue'
 export { default as Tab } from './components/Elements/Tabs/Tab.vue'
 export { default as Table } from './components/Tables/Table/Table.vue'
-export { default as Overlay } from './components/Overlays/Overlay/Overlay.vue'
+export { default as Backdrop } from './components/Overlays/Backdrop/Backdrop.vue'
 
 export { useVariantClasses, setVariantClasses } from './composables/variantClasses.ts'

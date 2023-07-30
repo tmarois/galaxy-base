@@ -282,10 +282,18 @@ export const variants = {
             emptyCellText: 'text-gray-400'
         }
     },
-    'Overlay': {
+    'Backdrop': {
         default: {
             base: 'top-0 left-0 bottom-0 right-0 bg-gray-400 bg-opacity-60 z-40',
             theme: 'bg-gray-400 bg-opacity-60'
+        }
+    },
+    'Modal': {
+        default: {
+            base: 'absolute inset-0 w-full h-full',
+            wrapper: 'flex items-center min-h-full',
+            content: 'z-50 transition-all duration-300 ease-in-out',
+            contentTheme: 'bg-white z-50 shadow-lg rounded'
         }
     },
 }

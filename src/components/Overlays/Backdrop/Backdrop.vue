@@ -41,7 +41,7 @@ const props = defineProps({
     }
 });
 
-const variantClasses = useVariantClasses('Overlay', props.variant, props.classes);
+const variantClasses = useVariantClasses('Backdrop', props.variant, props.classes);
 
 const close = () => {
     if (props.persist === false) emit('close');
