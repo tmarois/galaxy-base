@@ -50,6 +50,7 @@ function getComponents() {
 		{ text: 'Button', link: 'components/button' },
 		{ text: 'Button Group', link: 'components/button-group' },
 		{ text: 'Card', link: 'components/card' },
+		{ text: 'Carousel', link: 'components/carousel' },
 		{ text: 'Pagination', link: 'components/pagination' },
 		{ text: 'Dropdown', link: 'components/dropdown' },
 		{ text: 'Tooltip', link: 'components/tooltip' },

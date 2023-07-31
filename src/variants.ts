@@ -303,4 +303,9 @@ export const variants = {
             contentTheme: 'bg-white shadow-lg'
         }
     },
+    'Carousel': {
+        default: {
+            
+        }
+    },
 }
