@@ -308,4 +308,10 @@ export const variants = {
             
         }
     },
+    'Container': {
+        default: {
+            base: 'flex h-full flex-col mx-auto',
+            width: 'max-w-7xl'
+        }
+    },
 }
