@@ -8,8 +8,8 @@ import ToggleValuesExample from './toggle/examples/ToggleValuesExample.vue'
 ## Default Toggle
 <ToggleExample />
 
-## With inset
+## With Inset
 <ToggleExample inset />
 
-## With different values
+## With Values
 <ToggleValuesExample />
