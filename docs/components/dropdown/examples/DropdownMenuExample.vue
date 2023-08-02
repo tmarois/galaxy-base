@@ -1,6 +1,6 @@
 <template>
 	<div class="w-full vp-raw p-8 bg-white border-2 border-gray-300 rounded">
-		<Dropdown arrow>
+		<Dropdown :skidding="-45" arrow>
             <Button>Dropdown Menu</Button>
             <template #popper>
             <List>

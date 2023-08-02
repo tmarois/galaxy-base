@@ -8,6 +8,7 @@
         auto-hide 
         @show="onShow" 
         @hide="onHide"
+        :skidding="props.skidding"
         v-model:shown="isMenuShown"
         :class="variantClasses.wrapper"
         :popper-class="[variantClasses.size, variantClasses.theme]"
@@ -51,6 +52,10 @@ const props = defineProps({
         type: Number,
         default: 14
     },
+    skidding: {
+        type: Number,
+        default: 0
+    },
     arrow: {
         type: Boolean,
         default: false
@@ -58,6 +63,10 @@ const props = defineProps({
     itemSelector: {
         type: String,
         default: '.list--item:not(.disabled)',
+    },
+    skidding: {
+        type: Number,
+        default: 0
     },
 });
 
