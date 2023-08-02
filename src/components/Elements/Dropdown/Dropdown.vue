@@ -64,10 +64,6 @@ const props = defineProps({
         type: String,
         default: '.list--item:not(.disabled)',
     },
-    skidding: {
-        type: Number,
-        default: 0
-    },
 });
 
 const popoverRef = ref(null);
