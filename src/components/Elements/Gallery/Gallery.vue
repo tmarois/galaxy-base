@@ -23,12 +23,12 @@
                 </template>
             </template>
             <template v-else>
-                <div v-for="(_, slot) in $slots" :class="['gallery-item','inline-block', variantClasses.item]" :data-slot="slot" :key="slot" v-bind="scope || {}">
+                <div v-for="(_, slot) in $slots" :class="['gallery-item','inline-block', variantClasses.item]" :key="slot">
                     <slot :name="slot" />
                 </div>
                 <template v-if="props.animation && props.repeat > 1">
                     <template v-for="(_, index) in Array.from({ length: props.repeat })" :key="index">
-                        <div v-for="(_, slot) in $slots" :class="['gallery-item','inline-block', variantClasses.item]" :data-slot="slot" :key="slot" v-bind="scope || {}">
+                        <div v-for="(_, slot) in $slots" :class="['gallery-item','inline-block', variantClasses.item]" :key="slot">
                             <slot :name="slot" />
                         </div>
                     </template>
