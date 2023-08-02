@@ -56,6 +56,7 @@ function getComponents() {
 		{ text: 'Tooltip', link: 'components/tooltip' },
 		{ text: 'Tabs', link: 'components/tabs' },
 		{ text: 'List', link: 'components/list' },
+		{ text: 'Gallery', link: 'components/gallery' },
 		{ text: 'Expandable', link: 'components/expandable' },
 		{ text: 'Expandable Group', link: 'components/expandable-group' },
 		{ text: 'Loader Spinner', link: 'components/loader-spinner' },

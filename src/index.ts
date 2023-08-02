@@ -14,6 +14,7 @@ export { default as Carousel } from './components/Elements/Carousel/Carousel.vue
 export { default as Dropdown } from './components/Elements/Dropdown/Dropdown.vue'
 export { default as Tooltip } from './components/Elements/Tooltip/Tooltip.vue'
 export { default as Pagination } from './components/Elements/Pagination/Pagination.vue'
+export { default as Gallery } from './components/Elements/Gallery/Gallery.vue' 
 export { default as List } from './components/Elements/List/List.vue'
 export { default as ListItem } from './components/Elements/List/ListItem.vue'
 export { default as LoaderSpinner } from './components/Elements/Loader/LoaderSpinner.vue'

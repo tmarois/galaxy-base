@@ -314,4 +314,12 @@ export const variants = {
             width: 'max-w-7xl'
         }
     },
+    'Gallery': {
+        default: {
+            wrapper: 'relative overflow-hidden whitespace-nowrap',
+            itemList: '',
+            item: 'h-[48px] mr-[60px]',
+            image: 'w-full h-full'
+        }
+    },
 }
