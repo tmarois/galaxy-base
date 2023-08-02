@@ -3398,10 +3398,6 @@ const ns = ["data-slot"], Sr = {
     itemSelector: {
       type: String,
       default: ".list--item:not(.disabled)"
-    },
-    skidding: {
-      type: Number,
-      default: 0
     }
   },
   setup(t) {
