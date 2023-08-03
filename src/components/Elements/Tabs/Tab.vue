@@ -1,15 +1,19 @@
 <template>
-    <div class="relative">
-        <template v-if="props.preload === true">
-            <div v-show="activeTab === props.name" :class="variantClasses.tabContent">
-                <slot />
+    <div class="relative overflow-hidden">
+        <transition :name="props.transition" mode="out-in">
+            <div :key="activeTab">
+                <template v-if="props.preload === true">
+                    <div v-show="activeTab === props.name" :class="variantClasses.tabContent">
+                        <slot />
+                    </div>
+                </template>
+                <template v-else-if="props.preload === false">
+                    <div v-if="activeTab === props.name" :class="variantClasses.tabContent">
+                        <slot />
+                    </div>
+                </template>
             </div>
-        </template>
-        <template v-else-if="props.preload === false">
-            <div v-if="activeTab === props.name" :class="variantClasses.tabContent">
-                <slot />
-            </div>
-        </template>
+        </transition>
     </div>
 </template>
 
@@ -43,6 +47,10 @@ const props = defineProps({
         type: Boolean,
         default: true,
     },
+    transition: {
+        type: String,
+        default: 'fade'
+    }
 });
 
 const isTabVariant = inject('IS_TABS_VARIANT', null);
@@ -66,3 +74,29 @@ export default {
     __GALAXY_TAB__: true
 }
 </script>
+
+<style scoped>
+.slide-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
+</style>
