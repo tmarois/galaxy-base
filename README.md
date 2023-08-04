@@ -1,17 +1,19 @@
 # galaxy-vue
  
 
-## Install
+## Install Locally
 
 Install the package locally `npm ci` or `npm install`
 
+## Build Package
+
+This will compile new dist code `npm run build:package`
 
 ## View Examples
 
 View the documentation/example components `npm run dev` 
 
-
-## Use within project
+## Install Within Your Project
 
 Until there is a proper npm package to install from, you an do: 
 
