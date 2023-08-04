@@ -83,7 +83,7 @@ export default defineNuxtPlugin(() => {
 In the examples above, you can use variants like 
 
 ```vue
-<Button variant="CTA">Sign Up</Button>
+<Button variant="cta">Sign Up</Button>
 ```
 
 
