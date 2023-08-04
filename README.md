@@ -39,6 +39,8 @@ import { Button } from 'galaxy-vue'
 
 ## Variants
 
+Variants allow you to override existing default classes or create your own from scratch. You don't have to replace all the variant properties, only the ones you wish to change (usually to customize the colors). If you don't use all the properties from the default variant, it will automatically use the default variant properties in its place. 
+
 You can override or add new variants using:
 
 ```js
@@ -59,7 +61,7 @@ setVariantClasses({
 
 Note: it would be best to set this globally in your package like a set of rules. 
 
-Using Nuxt3 Plugins you can do: 
+Using **Nuxt3 Plugins** you can do: 
 
 ```js
 import { setVariantClasses } from 'galaxy-vue'
