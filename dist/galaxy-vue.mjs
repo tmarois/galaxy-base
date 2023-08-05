@@ -362,8 +362,8 @@ const br = {
       default: !1
     },
     fadeInOrder: {
-      type: Boolean,
-      default: !1
+      type: Number,
+      default: 0
     }
   },
   emits: ["close"],

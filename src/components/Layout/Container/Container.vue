@@ -34,8 +34,8 @@ const props = defineProps({
         default: false
     },
     fadeInOrder: {
-        type: Boolean,
-        default: false
+        type: Number,
+        default: 0
     }
 });
 const variantClasses = useVariantClasses('Container', props.variant, props.classes);
