@@ -38,6 +38,13 @@ function buildSidebar() {
 				...getOverlays(),
 			],
 		},
+		{
+			text: 'Layout',
+			collapsible: true,
+			items: [
+				...getLayouts(),
+			],
+		},
 	]
 }
 
@@ -76,6 +83,12 @@ function getOverlays() {
 function getTables() {
 	return [
 		{ text: 'Table', link: 'components/table' },
+	]
+}
+
+function getLayouts() {
+	return [
+		{ text: 'Container', link: 'components/container' },
 	]
 }
 

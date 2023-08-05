@@ -352,13 +352,34 @@ const br = {
       type: Object,
       default: () => {
       }
+    },
+    fluid: {
+      type: Boolean,
+      default: !1
+    },
+    fadeIn: {
+      type: Boolean,
+      default: !1
+    },
+    fadeInOrder: {
+      type: Boolean,
+      default: !1
     }
   },
   emits: ["close"],
   setup(t, { emit: o }) {
     const e = t, n = L("Container", e.variant, e.classes);
     return (s, l) => (i(), d("div", {
-      class: h([r(n).base, r(n).width])
+      class: h({
+        [r(n).base]: !0,
+        [r(n).width]: !e.fluid,
+        "w-full": e.fluid,
+        "g-fade-in": e.fadeIn,
+        "g-fade-in-first": e.fadeInOrder === 1,
+        "g-fade-in-second": e.fadeInOrder === 2,
+        "g-fade-in-third": e.fadeInOrder === 3,
+        "g-fade-in-forth": e.fadeInOrder === 4
+      })
     }, [
       C(s.$slots, "default")
     ], 2));
