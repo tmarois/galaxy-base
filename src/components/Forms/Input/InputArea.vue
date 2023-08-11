@@ -5,7 +5,7 @@
             :id="id"
             :title="props.label"
             :required="props.required"
-            :error="props.errors"
+            :errors="props.errors"
             :tooltip="props.tooltip"
             :disabled="props.disabled"
             :variant="props.variantLabel"

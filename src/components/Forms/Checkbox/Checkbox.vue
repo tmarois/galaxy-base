@@ -24,6 +24,7 @@
                     :tooltip="props.tooltip"
                     :variant="props.variantLabel"
                     :variantTooltip="props.variantTooltip"
+                    :errors="props.errors"
                 >{{ props.label }}</Label>
             </slot>
 		</div>
