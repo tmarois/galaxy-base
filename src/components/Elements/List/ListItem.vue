@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import { defineProps, useSlots, inject, ref } from 'vue'
+import { defineProps, useSlots, inject, ref, computed } from 'vue'
 import { useVariantClasses } from '../../../composables/variantClasses'
 
 const slots = useSlots()
