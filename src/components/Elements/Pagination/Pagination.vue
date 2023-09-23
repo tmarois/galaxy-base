@@ -53,7 +53,7 @@
                 :variant="variantButton"
             >{{ loadMoreButton }}</Button>
         </div>
-        <div v-else class="relative flex order-1 space-x-2">
+        <div v-else class="relative flex order-1 space-x-2 items-center">
             <div>
                 <Button 
                     ghost
