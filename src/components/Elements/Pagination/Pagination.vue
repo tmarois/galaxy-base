@@ -30,7 +30,7 @@
             <div v-if="!props.hideStats" class="text-center mb-2">
                 <template v-if="totalItems">Showing {{ toItem }} of {{ totalItems }} {{ itemName }}</template>
             </div>
-            <div v-if="nextPrevButtons" class="flex justify-center space-x-2">
+            <div v-if="nextPrevButtons" class="flex justify-center space-x-2 items-center">
                 <Button 
                     outlined
                     @click="prevDisabled ? '' : goToPage(props.page - 1)"
