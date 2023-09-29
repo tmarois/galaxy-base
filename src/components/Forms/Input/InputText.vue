@@ -23,7 +23,7 @@
                     :is="tag"
                     :id="id"
                     :type="inputType"
-                    :name="`${props.name}-${id}`"
+                    :name="inputName"
                     :placeholder="props.placeholder"
                     :readonly="props.readonly"
                     :disabled="props.disabled"
@@ -299,4 +299,12 @@ const internalValue = computed({
         emit('update:modelValue', (v));
     }
 });
+
+const inputName = computed(() => {
+    if (props.name === 'input') {
+        return props.name + '-' + id;
+    }
+    return props.name;
+});
+
 </script>
