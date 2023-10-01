@@ -4,7 +4,7 @@
         :is="options.tag" 
         :class="{
             'flex items-center': true,
-            'list--item': props.hover && !props.disabled && !props.divider,
+            'list--item': props.hover && !props.disabled && !props.divider && !props.preventMenuExit,
             'h-[1px]': props.divider,
             [variantClasses.listItem]: !props.divider,
             [variantClasses.listItemSize]: !props.divider,
@@ -46,6 +46,10 @@ const props = defineProps({
     hover: {
         type: Boolean,
         default: true
+    },
+    preventMenuExit: {
+        type: Boolean,
+        default: false
     },
     divider: {
         type: Boolean,
