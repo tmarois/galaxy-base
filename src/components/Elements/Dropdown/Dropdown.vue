@@ -142,6 +142,7 @@ const popoverClick = (e) => {
 const onShow = () => {
     document.addEventListener('keydown', popoverKeydown);
     document.addEventListener('click', popoverClick);
+    console.log('shown')
     emit('shown',true)
 };
 
@@ -150,6 +151,7 @@ const onHide = () => {
     document.removeEventListener('click', popoverClick);
     const popover = popoverRef.value;
     popover?.$refs.popper.$_targetNodes[0].focus();
+    console.log('hidden')
     emit('hidden',true)
 };
 
