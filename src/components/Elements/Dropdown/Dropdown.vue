@@ -31,8 +31,10 @@
 <script setup>
 import { useVariantClasses } from '../../../composables/variantClasses'
 import { Dropdown as FloatingVueDropdown } from 'floating-vue'
-import { onBeforeUnmount, ref, useSlots, provide, computed } from 'vue'
+import { onBeforeUnmount, ref, useSlots, provide, computed, defineEmits } from 'vue'
 import 'floating-vue/dist/style.css'
+
+const emit = defineEmits(['hidden','shown'])
 
 const slots = useSlots()
 const props = defineProps({
@@ -140,6 +142,7 @@ const popoverClick = (e) => {
 const onShow = () => {
     document.addEventListener('keydown', popoverKeydown);
     document.addEventListener('click', popoverClick);
+    emit('shown',true)
 };
 
 const onHide = () => {
@@ -147,6 +150,7 @@ const onHide = () => {
     document.removeEventListener('click', popoverClick);
     const popover = popoverRef.value;
     popover?.$refs.popper.$_targetNodes[0].focus();
+    emit('hidden',true)
 };
 
 onBeforeUnmount(() => {
