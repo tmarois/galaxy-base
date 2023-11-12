@@ -16,6 +16,7 @@
                     ref="inputTag"
                     :is="tag"
                     :id="id"
+                    :rows="props.rows"
                     :name="`${props.name}-${id}`"
                     :placeholder="props.placeholder"
                     :readonly="props.readonly"
@@ -186,6 +187,10 @@ const props = defineProps({
         type: String,
         default: null
     },
+    rows: {
+        type: Number,
+        default: 4
+    }
 });
 
 const variantClasses = useVariantClasses('InputArea', props.variant, props.classes);

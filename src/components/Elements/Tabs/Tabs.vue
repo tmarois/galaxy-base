@@ -33,7 +33,7 @@
 
 <script setup>
 import { useVariantClasses } from '../../../composables/variantClasses'
-import { computed, provide, toRef, useSlots } from 'vue'
+import { computed, provide, useSlots } from 'vue'
 import { Fragment, createTextVNode, Comment } from 'vue'
 
 const props = defineProps({

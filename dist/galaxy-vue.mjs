@@ -5045,6 +5045,10 @@ const Ns = ["id", "type", "checked", "value", "disabled"], Rs = {
     tooltip: {
       type: String,
       default: null
+    },
+    rows: {
+      type: Number,
+      default: 4
     }
   },
   emits: ["keyup", "keydown", "enter", "focusin", "focusout", "blur", "cleared", "update:modelValue", "input"],
@@ -5100,6 +5104,7 @@ const Ns = ["id", "type", "checked", "value", "disabled"], Rs = {
             ref_key: "inputTag",
             ref: l,
             id: r(s),
+            rows: e.rows,
             name: `${e.name}-${r(s)}`,
             placeholder: e.placeholder,
             readonly: e.readonly,
@@ -5121,7 +5126,7 @@ const Ns = ["id", "type", "checked", "value", "disabled"], Rs = {
             step: e.step,
             class: m(g.value),
             style: te((e.width ? `width: ${e.width}px;` : "") + e.customStyle)
-          }, null, 40, ["id", "name", "placeholder", "readonly", "disabled", "required", "maxlength", "autocomplete", "autofill", "pattern", "value", "min", "max", "step", "class", "style"])),
+          }, null, 40, ["id", "rows", "name", "placeholder", "readonly", "disabled", "required", "maxlength", "autocomplete", "autofill", "pattern", "value", "min", "max", "step", "class", "style"])),
           e.clearable && $.value && !e.readonly && !e.disabled ? (i(), c("div", {
             key: 0,
             class: m(r(o).clearable),
